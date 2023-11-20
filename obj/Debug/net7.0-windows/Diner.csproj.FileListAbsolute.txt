@@ -22,3 +22,4 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Properties.Resources.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.EntreeControl.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\burger.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.UserControls.CartItem.resources

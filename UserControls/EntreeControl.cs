@@ -35,7 +35,8 @@ namespace Diner
             InvokeOnClick(this, EventArgs.Empty);
 
             AddToCartClicked?.Invoke(this,
-                new EntreeEventArgs(this));
+                new EntreeEventArgs(
+                    new EntreeControl(Entree)));
         }
     }
 }

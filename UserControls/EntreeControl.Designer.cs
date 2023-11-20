@@ -87,6 +87,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(5, 5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.Size = new System.Drawing.Size(157, 161);
             this.guna2Panel1.TabIndex = 3;
             // 

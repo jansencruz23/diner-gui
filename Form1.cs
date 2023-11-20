@@ -1,5 +1,6 @@
 using Diner.CustomEventArgs;
 using Diner.Models;
+using Diner.UserControls;
 
 namespace Diner
 {
@@ -19,6 +20,7 @@ namespace Diner
                 new EntreeControl(
                     new Entree
                     {
+                        Id = 1,
                         Image = Image.FromFile("./Icons/burger.jpg"),
                         Name = "Burger",
                         Price = 25
@@ -33,7 +35,27 @@ namespace Diner
 
         private void Entree_AddToCartClicked(object sender, EntreeEventArgs e)
         {
-            MessageBox.Show(e.EntreeControl.Entree.Name);
+            panelCart.Controls.Add(
+                new CartItem(e.EntreeControl.Entree));
+        }
+
+        private void lbSauce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbSauce.SelectedItem == null)
+            {
+                return;
+            }
+
+            panelCart.Controls.Add(
+                new CartItem(
+                    new Entree()
+                    {
+                        Id = 10,
+                        Image = null,
+                        Name = lbSauce.SelectedItem.ToString(),
+                        Price = 0,
+                        Quantity = 0
+                    }));
         }
     }
 }

@@ -30,8 +30,12 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -44,16 +48,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabDrinks = new System.Windows.Forms.TabPage();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2ImageRadioButton1 = new Guna.UI2.WinForms.Guna2ImageRadioButton();
@@ -64,13 +67,10 @@
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbSauce = new System.Windows.Forms.ListBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPanel = new Guna.UI2.WinForms.Guna2TabControl();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelCart = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.menuStrip1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -128,6 +128,23 @@
             this.guna2Panel1.Size = new System.Drawing.Size(305, 540);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.CustomizableEdges = customizableEdges1;
+            this.guna2Panel7.Location = new System.Drawing.Point(0, 364);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.guna2Panel7.Size = new System.Drawing.Size(305, 176);
+            this.guna2Panel7.TabIndex = 1;
+            // 
+            // panelCart
+            // 
+            this.panelCart.AutoScroll = true;
+            this.panelCart.Location = new System.Drawing.Point(1, 45);
+            this.panelCart.Name = "panelCart";
+            this.panelCart.Size = new System.Drawing.Size(304, 319);
+            this.panelCart.TabIndex = 0;
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -141,6 +158,15 @@
             this.guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2Panel2.Size = new System.Drawing.Size(970, 41);
             this.guna2Panel2.TabIndex = 3;
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.CustomizableEdges = customizableEdges5;
+            this.guna2Panel6.Location = new System.Drawing.Point(665, 41);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.guna2Panel6.Size = new System.Drawing.Size(305, 364);
+            this.guna2Panel6.TabIndex = 0;
             // 
             // tabDrinks
             // 
@@ -158,10 +184,10 @@
             this.guna2GroupBox1.CustomizableEdges = customizableEdges10;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(68, 43);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(23, 41);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(382, 284);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(427, 286);
             this.guna2GroupBox1.TabIndex = 1;
             this.guna2GroupBox1.Text = "guna2GroupBox1";
             // 
@@ -204,6 +230,7 @@
             // 
             // panelItem
             // 
+            this.panelItem.AutoScroll = true;
             this.panelItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelItem.Location = new System.Drawing.Point(0, 0);
             this.panelItem.Name = "panelItem";
@@ -215,7 +242,7 @@
             this.guna2Panel4.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel4.Controls.Add(this.label3);
             this.guna2Panel4.Controls.Add(this.label2);
-            this.guna2Panel4.Controls.Add(this.listBox2);
+            this.guna2Panel4.Controls.Add(this.lbSauce);
             this.guna2Panel4.CustomizableEdges = customizableEdges16;
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 360);
@@ -261,14 +288,20 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Extra Sauces";
             // 
-            // listBox2
+            // lbSauce
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(18, 53);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(187, 94);
-            this.listBox2.TabIndex = 1;
+            this.lbSauce.FormattingEnabled = true;
+            this.lbSauce.ItemHeight = 15;
+            this.lbSauce.Items.AddRange(new object[] {
+            "Ketchup",
+            "Mang Tomas",
+            "Mustard",
+            "Gravy"});
+            this.lbSauce.Location = new System.Drawing.Point(18, 53);
+            this.lbSauce.Name = "lbSauce";
+            this.lbSauce.Size = new System.Drawing.Size(187, 94);
+            this.lbSauce.TabIndex = 1;
+            this.lbSauce.SelectedIndexChanged += new System.EventHandler(this.lbSauce_SelectedIndexChanged);
             // 
             // guna2Panel3
             // 
@@ -327,31 +360,6 @@
             this.tabPanel.TabIndex = 0;
             this.tabPanel.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.CustomizableEdges = customizableEdges5;
-            this.guna2Panel6.Location = new System.Drawing.Point(665, 41);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            this.guna2Panel6.Size = new System.Drawing.Size(305, 364);
-            this.guna2Panel6.TabIndex = 0;
-            // 
-            // panelCart
-            // 
-            this.panelCart.Location = new System.Drawing.Point(1, 45);
-            this.panelCart.Name = "panelCart";
-            this.panelCart.Size = new System.Drawing.Size(304, 319);
-            this.panelCart.TabIndex = 0;
-            // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.CustomizableEdges = customizableEdges1;
-            this.guna2Panel7.Location = new System.Drawing.Point(0, 364);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.guna2Panel7.Size = new System.Drawing.Size(305, 176);
-            this.guna2Panel7.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -400,7 +408,7 @@
         private Guna.UI2.WinForms.Guna2TabControl tabPanel;
         private Label label3;
         private Label label2;
-        private ListBox listBox2;
+        private ListBox lbSauce;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private FlowLayoutPanel panelItem;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
