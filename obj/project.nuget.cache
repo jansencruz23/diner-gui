@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "LGmjMC/yM8UKSKSkrnZAjlM1owx5FjMp2/HV3+0CznbwY/F2sTNOwdm3BC7kOrWOITrm2m3OgQju5z+oKDEjHw==",
+  "success": true,
+  "projectFilePath": "D:\\User\\Jansen\\Self Study\\2023 - 11 - NOVEMBER\\C#\\Diner\\Diner.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.5\\guna.ui2.winforms.2.0.4.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
