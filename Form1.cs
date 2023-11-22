@@ -17,6 +17,7 @@ namespace Diner
 
         private void InitializeEntrees()
         {
+            #region --INITIALIZE ENTREE CONTROLS--
             var entrees = new List<EntreeControl>
             {
                 new EntreeControl(
@@ -48,6 +49,8 @@ namespace Diner
                     })
             };
 
+            #endregion
+
             _entreeControls.AddRange(entrees);
 
             foreach (var entree in _entreeControls)
@@ -59,9 +62,7 @@ namespace Diner
 
         private void Entree_AddToCartClicked(object sender, EntreeEventArgs e)
         {
-            var existingItem = panelCart.Controls
-                .OfType<CartItem>()
-                .FirstOrDefault(cart => cart.Entree.Id == e.EntreeControl.Entree.Id);
+            var existingItem = GetExistingCartItem(e.EntreeControl.Entree.Id);
 
             if (existingItem != null)
             {
@@ -81,52 +82,33 @@ namespace Diner
                 return;
             }
 
-            var items = lbSauce.SelectedItems;
-
-            foreach (var item in items)
+            foreach (var item in lbSauce.SelectedItems)
             {
                 var itemName = item.ToString();
-                var existingItem = panelCart.Controls
-                    .OfType<CartItem>()
-                    .FirstOrDefault(cart => cart.Entree.Name.Equals(itemName));
-
-                if (existingItem != null)
-                {
-                    existingItem.Entree.Quantity++;
-                    existingItem.InitializeCart();
-                    continue;
-                }
-
-                panelCart.Controls.Add(
-                    new CartItem(
-                        new Entree()
-                        {
-                            Name = itemName,
-                            Image = Image.FromFile($"./Icons/{itemName}.jpg"),
-                            Price = 0,
-                            Quantity = 1
-                        }));
+                UpdateCartItem(itemName);
             }
         }
 
-        private void cbRequest_SelectedIndexChanged(object sender, EventArgs e)
+        private void UpdateCartItem(string itemName)
         {
-            var itemName = cbRequest.SelectedItem.ToString();
-
-            var existingItem = panelCart.Controls
-                .OfType<CartItem>()
-                .FirstOrDefault(cart => cart.Entree.Id == 99);
+            var existingItem = GetExistingCartItem(itemName);
 
             if (existingItem != null)
             {
-                panelCart.Controls.Remove(existingItem);
+                existingItem.Entree.Quantity++;
+                existingItem.InitializeCart();
+                return;
             }
 
+            AddNewCartItem(itemName);
+        }
+
+        private void AddNewCartItem(string itemName)
+        {
             panelCart.Controls.Add(
                 new CartItem(
-                    new Entree()
+                    new Entree
                     {
-                        Id = 99,
                         Name = itemName,
                         Image = Image.FromFile($"./Icons/{itemName}.jpg"),
                         Price = 0,
@@ -134,79 +116,77 @@ namespace Diner
                     }));
         }
 
-        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        private CartItem GetExistingCartItem(string itemName)
+            => panelCart.Controls
+                .OfType<CartItem>()
+                .FirstOrDefault(cart => cart.Entree.Name.Equals(itemName))!;
+
+        private CartItem GetExistingCartItem(int id)
+            => panelCart.Controls
+                .OfType<CartItem>()
+                .FirstOrDefault(cart => cart.Entree.Id == id)!;
+
+        private void cbRequest_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var drinks = new List<EntreeControl>
+            if (cbRequest.SelectedItem == null)
             {
-                new EntreeControl(
-                    new Entree
-                    {
-                        Id = 98,
-                        Image = Image.FromFile("./Icons/Milk.jpg"),
-                        Name = "Milk",
-                        Price = 15,
-                        Quantity = 1
-                    }),
-                new EntreeControl(
-                    new Entree
-                    {
-                        Id = 98,
-                        Image = Image.FromFile("./Icons/Juice.jpg"),
-                        Name = "Juice",
-                        Price = 15,
-                        Quantity = 1
-                    }),
-                new EntreeControl(
-                    new Entree
-                    {
-                        Id = 98,
-                        Image = Image.FromFile("./Icons/Soda.jpg"),
-                        Name = "Soda",
-                        Price = 25,
-                        Quantity = 1
-                    }),
-                new EntreeControl(
-                    new Entree
-                    {
-                        Id = 98,
-                        Image = Image.FromFile("./Icons/Lemonade.jpg"),
-                        Name = "Lemonade",
-                        Price = 30,
-                        Quantity = 1
-                    }),
-                new EntreeControl(
-                    new Entree
-                    {
-                        Id = 98,
-                        Image = Image.FromFile("./Icons/Tea.jpg"),
-                        Name = "Tea",
-                        Price = 30,
-                        Quantity = 1
-                    }),
-                new EntreeControl(
-                    new Entree
-                    {
-                        Id = 98,
-                        Image = Image.FromFile("./Icons/Coffee.jpg"),
-                        Name = "Coffee",
-                        Price = 35,
-                        Quantity = 1
-                    })
+                return;
+            }
+
+            var itemName = cbRequest.SelectedItem.ToString();
+
+            var entree = new Entree
+            {
+                Id = 99,
+                Name = itemName,
+                Image = Image.FromFile($"./Icons/{itemName}.jpg"),
+                Price = 0,
+                Quantity = 1
             };
 
+            AddOrUpdateSingleItem(entree);
+        }
+
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
             var itemName = (sender as Guna2RadioButton).Text;
 
+            if (drinkDetails.TryGetValue(itemName, out var drinkInfo))
+            {
+                var itemImage = Image.FromFile($"./Icons/{drinkInfo.imageName}");
+                AddOrUpdateSingleItem(new Entree
+                {
+                    Id = 98,
+                    Name = itemName,
+                    Image = itemImage,
+                    Price = drinkInfo.price,
+                    Quantity = 1
+                });
+            }
+        }
+
+        private void AddOrUpdateSingleItem(Entree entree)
+        {
             var existingItem = panelCart.Controls
                 .OfType<CartItem>()
-                .FirstOrDefault(cart => cart.Entree.Id == 98);
+                .FirstOrDefault(cart => cart.Entree.Id == entree.Id);
 
             if (existingItem != null)
             {
                 panelCart.Controls.Remove(existingItem);
             }
 
-            var drink = drinks.FirstOrDefault(i => i.Entree.Name.Equals(itemName));
-            panelCart.Controls.Add(new CartItem(drink.Entree));
+            panelCart.Controls.Add(new CartItem(entree));
         }
+
+        private readonly Dictionary<string, (string imageName, int price)> drinkDetails = new Dictionary<string, (string, int)>
+        {
+            { "Milk", ("Milk.jpg", 15) },
+            { "Juice", ("Juice.jpg", 15) },
+            { "Soda", ("Soda.jpg", 25) },
+            { "Lemonade", ("Lemonade.jpg", 30) },
+            { "Tea", ("Tea.jpg", 30) },
+            { "Coffee", ("Coffee.jpg", 35) }
+        };
     }
 }
