@@ -18,14 +18,15 @@ namespace Diner
         {
             DateTime currentTime = DateTime.Now;
             ReportParameter[] parameters = new ReportParameter[5];
+
             parameters[0] = new ReportParameter("CurrentTime", currentTime.ToString());
             parameters[1] = new ReportParameter("Items", GetItems().ToString());
             parameters[2] = new ReportParameter("Quantities", GetQuantities().ToString());
             parameters[3] = new ReportParameter("SubTotals", GetSubTotals().ToString());
             parameters[4] = new ReportParameter("Total", GetTotal().ToString());
+
             reportViewer.LocalReport.ReportPath = "Reports\\Receipt.rdlc";
             reportViewer.LocalReport.SetParameters(parameters);
-
             reportViewer.RefreshReport();
         }
 

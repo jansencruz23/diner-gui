@@ -27,7 +27,7 @@ namespace Diner
                         Id = 1,
                         Image = Image.FromFile("./Icons/burger.jpg"),
                         Name = "Burger",
-                        Price = 25,
+                        Price = 35,
                         Quantity = 1
                     }),
                 new EntreeControl(
@@ -43,9 +43,18 @@ namespace Diner
                     new Entree
                     {
                         Id = 3,
-                        Image = Image.FromFile("./Icons/Fried Chicken.jpg"),
-                        Name = "Fried Chicken",
-                        Price = 75,
+                        Image = Image.FromFile("./Icons/Chicken Masala.jpg"),
+                        Name = "Chicken Masala",
+                        Price = 140,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 3,
+                        Image = Image.FromFile("./Icons/Chicken Biryani.jpg"),
+                        Name = "Chicken Biryani",
+                        Price = 120,
                         Quantity = 1
                     })
             };
@@ -151,7 +160,7 @@ namespace Diner
                 Id = 99,
                 Name = itemName,
                 Image = Image.FromFile($"./Icons/{itemName}.jpg"),
-                Price = 0,
+                Price = 10,
                 Quantity = 1
             };
 
@@ -255,6 +264,15 @@ namespace Diner
                 .FirstOrDefault(i => i.Entree.Name.Equals("Water"));
 
             panelCart.Controls.Remove(cartWater);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            foreach (var item in panelCart.Controls.OfType<CartItem>())
+            {
+                item.Entree.Quantity = 1;
+            }
+            panelCart.Controls.Clear();
         }
     }
 }
