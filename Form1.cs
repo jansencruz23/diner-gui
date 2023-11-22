@@ -93,7 +93,7 @@ namespace Diner
                 {
                     existingItem.Entree.Quantity++;
                     existingItem.InitializeCart();
-                    break;
+                    continue;
                 }
 
                 panelCart.Controls.Add(
