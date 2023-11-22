@@ -9,11 +9,20 @@ namespace Diner.UserControls
         {
             Entree = entree;
             InitializeComponent();
+            InitializeCart();
+        }
 
-            lblName.Text = entree.Name;
-            lblPrice.Text = $"₱ {entree.Price}";
-            lblQuantity.Text = $"x{entree.Quantity}";
-            picIcon.Image = entree.Image;
+        public void InitializeCart()
+        {
+            lblName.Text = Entree.Name;
+            lblQuantity.Text = $"x{Entree.Quantity}";
+            lblPrice.Text = $"₱ {Entree.Price * Entree.Quantity}";
+            picIcon.Image = Entree.Image;
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

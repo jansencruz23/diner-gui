@@ -23,3 +23,13 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.EntreeControl.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\burger.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.UserControls.CartItem.resources
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Ketchup.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Mang Tomas.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Mustard.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Gravy.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Fried Chicken.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Pita.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Pumpernickel.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Seedless Rye.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Sour Dough.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Whole Wheat.jpg

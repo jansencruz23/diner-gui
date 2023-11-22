@@ -64,7 +64,7 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelItem = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbRequest = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbSauce = new System.Windows.Forms.ListBox();
@@ -92,7 +92,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(970, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(998, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,27 +122,30 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel7);
             this.guna2Panel1.Controls.Add(this.panelCart);
             this.guna2Panel1.CustomizableEdges = customizableEdges3;
-            this.guna2Panel1.Location = new System.Drawing.Point(665, 68);
+            this.guna2Panel1.Location = new System.Drawing.Point(678, 68);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            this.guna2Panel1.Size = new System.Drawing.Size(305, 540);
+            this.guna2Panel1.Size = new System.Drawing.Size(320, 540);
             this.guna2Panel1.TabIndex = 2;
             // 
             // guna2Panel7
             // 
             this.guna2Panel7.CustomizableEdges = customizableEdges1;
+            this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel7.Location = new System.Drawing.Point(0, 364);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.guna2Panel7.Size = new System.Drawing.Size(305, 176);
+            this.guna2Panel7.Size = new System.Drawing.Size(320, 176);
             this.guna2Panel7.TabIndex = 1;
             // 
             // panelCart
             // 
+            this.panelCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelCart.AutoScroll = true;
             this.panelCart.Location = new System.Drawing.Point(1, 45);
             this.panelCart.Name = "panelCart";
-            this.panelCart.Size = new System.Drawing.Size(304, 319);
+            this.panelCart.Size = new System.Drawing.Size(319, 319);
             this.panelCart.TabIndex = 0;
             // 
             // guna2Panel2
@@ -156,7 +159,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 27);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            this.guna2Panel2.Size = new System.Drawing.Size(970, 41);
+            this.guna2Panel2.Size = new System.Drawing.Size(998, 41);
             this.guna2Panel2.TabIndex = 3;
             // 
             // guna2Panel6
@@ -173,7 +176,7 @@
             this.tabDrinks.Controls.Add(this.guna2GroupBox1);
             this.tabDrinks.Location = new System.Drawing.Point(184, 4);
             this.tabDrinks.Name = "tabDrinks";
-            this.tabDrinks.Size = new System.Drawing.Size(475, 532);
+            this.tabDrinks.Size = new System.Drawing.Size(488, 532);
             this.tabDrinks.TabIndex = 2;
             this.tabDrinks.Text = "Drink Selections";
             this.tabDrinks.UseVisualStyleBackColor = true;
@@ -212,7 +215,7 @@
             this.tabEntree.Location = new System.Drawing.Point(184, 4);
             this.tabEntree.Margin = new System.Windows.Forms.Padding(0);
             this.tabEntree.Name = "tabEntree";
-            this.tabEntree.Size = new System.Drawing.Size(475, 532);
+            this.tabEntree.Size = new System.Drawing.Size(488, 532);
             this.tabEntree.TabIndex = 0;
             this.tabEntree.Text = "Entree Selection";
             this.tabEntree.UseVisualStyleBackColor = true;
@@ -225,7 +228,7 @@
             this.guna2Panel5.Location = new System.Drawing.Point(0, 41);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            this.guna2Panel5.Size = new System.Drawing.Size(475, 319);
+            this.guna2Panel5.Size = new System.Drawing.Size(488, 319);
             this.guna2Panel5.TabIndex = 2;
             // 
             // panelItem
@@ -234,12 +237,12 @@
             this.panelItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelItem.Location = new System.Drawing.Point(0, 0);
             this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(475, 319);
+            this.panelItem.Size = new System.Drawing.Size(488, 319);
             this.panelItem.TabIndex = 0;
             // 
             // guna2Panel4
             // 
-            this.guna2Panel4.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel4.Controls.Add(this.cbRequest);
             this.guna2Panel4.Controls.Add(this.label3);
             this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.Controls.Add(this.lbSauce);
@@ -248,25 +251,32 @@
             this.guna2Panel4.Location = new System.Drawing.Point(0, 360);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            this.guna2Panel4.Size = new System.Drawing.Size(475, 172);
+            this.guna2Panel4.Size = new System.Drawing.Size(488, 172);
             this.guna2Panel4.TabIndex = 1;
             // 
-            // guna2ComboBox1
+            // cbRequest
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.CustomizableEdges = customizableEdges14;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(265, 53);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(191, 36);
-            this.guna2ComboBox1.TabIndex = 0;
+            this.cbRequest.BackColor = System.Drawing.Color.Transparent;
+            this.cbRequest.CustomizableEdges = customizableEdges14;
+            this.cbRequest.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbRequest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRequest.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbRequest.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbRequest.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbRequest.ItemHeight = 30;
+            this.cbRequest.Items.AddRange(new object[] {
+            "Whole Wheat",
+            "Pumpernickel",
+            "Seedless Rye",
+            "Pita",
+            "Sour Dough"});
+            this.cbRequest.Location = new System.Drawing.Point(265, 53);
+            this.cbRequest.Name = "cbRequest";
+            this.cbRequest.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            this.cbRequest.Size = new System.Drawing.Size(191, 36);
+            this.cbRequest.TabIndex = 0;
+            this.cbRequest.SelectedIndexChanged += new System.EventHandler(this.cbRequest_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -299,6 +309,7 @@
             "Gravy"});
             this.lbSauce.Location = new System.Drawing.Point(18, 53);
             this.lbSauce.Name = "lbSauce";
+            this.lbSauce.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbSauce.Size = new System.Drawing.Size(187, 94);
             this.lbSauce.TabIndex = 1;
             this.lbSauce.SelectedIndexChanged += new System.EventHandler(this.lbSauce_SelectedIndexChanged);
@@ -311,7 +322,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            this.guna2Panel3.Size = new System.Drawing.Size(475, 41);
+            this.guna2Panel3.Size = new System.Drawing.Size(488, 41);
             this.guna2Panel3.TabIndex = 0;
             // 
             // label1
@@ -338,7 +349,7 @@
             this.tabPanel.Name = "tabPanel";
             this.tabPanel.Padding = new System.Drawing.Point(0, 0);
             this.tabPanel.SelectedIndex = 0;
-            this.tabPanel.Size = new System.Drawing.Size(663, 540);
+            this.tabPanel.Size = new System.Drawing.Size(676, 540);
             this.tabPanel.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPanel.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabPanel.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -364,7 +375,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 608);
+            this.ClientSize = new System.Drawing.Size(998, 608);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tabPanel);
@@ -402,7 +413,7 @@
         private Guna.UI2.WinForms.Guna2ImageRadioButton guna2ImageRadioButton1;
         private TabPage tabEntree;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbRequest;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TabControl tabPanel;
