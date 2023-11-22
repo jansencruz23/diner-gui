@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
+            // 
+            // reportViewer
+            // 
+            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer.DocumentMapWidth = 81;
+            this.reportViewer.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer.Name = "ReportViewer";
+            this.reportViewer.Padding = new System.Windows.Forms.Padding(10);
+            this.reportViewer.ServerReport.BearerToken = null;
+            this.reportViewer.Size = new System.Drawing.Size(383, 450);
+            this.reportViewer.TabIndex = 0;
             // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 450);
+            this.ClientSize = new System.Drawing.Size(270, 362);
             this.Name = "Receipt";
             this.Text = "Receipt";
+            this.Controls.Add(this.reportViewer);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }
 }

@@ -233,7 +233,14 @@ namespace Diner
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            var entrees = new List<Entree>();
+            foreach(var cart in panelCart.Controls.OfType<CartItem>())
+            {
+                entrees.Add(cart.Entree);
+            }
 
+            var receiptForm = new Receipt(entrees);
+            receiptForm.ShowDialog();
         }
 
         private void cbWater_CheckedChanged(object sender, EventArgs e)

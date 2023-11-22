@@ -49,6 +49,10 @@
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.5, )"
+            },
+            "ReportViewerCore.WinForms": {
+              "target": "Package",
+              "version": "[15.1.19, )"
             }
           },
           "imports": [
