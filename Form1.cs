@@ -9,6 +9,7 @@ namespace Diner
     {
         private List<EntreeControl> _entreeControls;
         private double _total;
+        private bool _extraPanelExpand;
         public Form1()
         {
             _entreeControls = new();
@@ -337,13 +338,7 @@ namespace Diner
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            if (panelExtra.Size.Height >= 21)
-            {
-                panelExtra.Size = new Size(672, 20);
-                return;
-            }
-
-            panelExtra.Size = new Size(672, 178);
+            timerPanel.Start();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -362,6 +357,28 @@ namespace Diner
                 MessageDialogButtons.OK,
                 MessageDialogIcon.Information,
                 MessageDialogStyle.Dark);
+        }
+
+        private void timerPanel_Tick(object sender, EventArgs e)
+        {
+            if (_extraPanelExpand)
+            {
+                panelExtra.Height += 5;
+                if (panelExtra.Height >= 178)
+                {
+                    _extraPanelExpand = false;
+                    timerPanel.Stop();
+                }
+            }
+            else
+            {
+                panelExtra.Height -= 5;
+                if (panelExtra.Height <= 21)
+                {
+                    _extraPanelExpand = true;
+                    timerPanel.Stop();
+                }
+            }
         }
     }
 }

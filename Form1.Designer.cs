@@ -96,6 +96,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPanel = new Guna.UI2.WinForms.Guna2TabControl();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.timerPanel = new System.Windows.Forms.Timer(this.components);
+            this.dragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.menuStrip1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panelPay.SuspendLayout();
@@ -186,7 +188,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -204,7 +206,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(844, 24);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            this.guna2Panel1.Size = new System.Drawing.Size(354, 716);
+            this.guna2Panel1.Size = new System.Drawing.Size(354, 602);
             this.guna2Panel1.TabIndex = 2;
             // 
             // btnClear
@@ -252,7 +254,7 @@
             this.panelPay.CustomizableEdges = customizableEdges5;
             this.panelPay.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.panelPay.Location = new System.Drawing.Point(0, 585);
+            this.panelPay.Location = new System.Drawing.Point(0, 471);
             this.panelPay.Name = "panelPay";
             this.panelPay.ShadowDecoration.BorderRadius = 15;
             this.panelPay.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
@@ -311,7 +313,7 @@
             this.panelCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.panelCart.Location = new System.Drawing.Point(0, 57);
             this.panelCart.Name = "panelCart";
-            this.panelCart.Size = new System.Drawing.Size(354, 530);
+            this.panelCart.Size = new System.Drawing.Size(354, 416);
             this.panelCart.TabIndex = 0;
             this.panelCart.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelCart_ControlAdded);
             this.panelCart.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.panelCart_ControlRemoved);
@@ -324,7 +326,7 @@
             this.tabDrinks.Controls.Add(this.groupBox);
             this.tabDrinks.Location = new System.Drawing.Point(4, 44);
             this.tabDrinks.Name = "tabDrinks";
-            this.tabDrinks.Size = new System.Drawing.Size(840, 672);
+            this.tabDrinks.Size = new System.Drawing.Size(840, 558);
             this.tabDrinks.TabIndex = 2;
             this.tabDrinks.Text = "Drink Selections";
             this.toolTip.SetToolTip(this.tabDrinks, "Melk");
@@ -561,7 +563,7 @@
             this.tabEntree.Location = new System.Drawing.Point(4, 44);
             this.tabEntree.Margin = new System.Windows.Forms.Padding(0);
             this.tabEntree.Name = "tabEntree";
-            this.tabEntree.Size = new System.Drawing.Size(840, 672);
+            this.tabEntree.Size = new System.Drawing.Size(840, 558);
             this.tabEntree.TabIndex = 0;
             this.tabEntree.Text = "Entree Selection";
             // 
@@ -573,7 +575,7 @@
             this.guna2Panel5.Location = new System.Drawing.Point(0, 49);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            this.guna2Panel5.Size = new System.Drawing.Size(840, 445);
+            this.guna2Panel5.Size = new System.Drawing.Size(840, 331);
             this.guna2Panel5.TabIndex = 2;
             // 
             // panelItem
@@ -584,7 +586,7 @@
             this.panelItem.Location = new System.Drawing.Point(0, 0);
             this.panelItem.Margin = new System.Windows.Forms.Padding(0);
             this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(840, 445);
+            this.panelItem.Size = new System.Drawing.Size(840, 331);
             this.panelItem.TabIndex = 0;
             // 
             // panelExtra
@@ -601,7 +603,7 @@
             this.panelExtra.CustomizableEdges = customizableEdges21;
             this.panelExtra.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelExtra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.panelExtra.Location = new System.Drawing.Point(0, 494);
+            this.panelExtra.Location = new System.Drawing.Point(0, 380);
             this.panelExtra.Margin = new System.Windows.Forms.Padding(0);
             this.panelExtra.Name = "panelExtra";
             this.panelExtra.ShadowDecoration.BorderRadius = 15;
@@ -622,7 +624,7 @@
             this.btnMinimize.FillColor = System.Drawing.Color.DimGray;
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(396, 10);
+            this.btnMinimize.Location = new System.Drawing.Point(396, 9);
             this.btnMinimize.MaximumSize = new System.Drawing.Size(46, 5);
             this.btnMinimize.MinimumSize = new System.Drawing.Size(46, 5);
             this.btnMinimize.Name = "btnMinimize";
@@ -738,7 +740,7 @@
             this.tabPanel.Padding = new System.Drawing.Point(0, 0);
             this.tabPanel.RightToLeftLayout = true;
             this.tabPanel.SelectedIndex = 0;
-            this.tabPanel.Size = new System.Drawing.Size(848, 720);
+            this.tabPanel.Size = new System.Drawing.Size(848, 606);
             this.tabPanel.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPanel.TabButtonHoverState.FillColor = System.Drawing.Color.Black;
             this.tabPanel.TabButtonHoverState.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -761,12 +763,24 @@
             this.tabPanel.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.tabPanel.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
+            // timerPanel
+            // 
+            this.timerPanel.Interval = 10;
+            this.timerPanel.Tick += new System.EventHandler(this.timerPanel_Tick);
+            // 
+            // dragControl
+            // 
+            this.dragControl.DockIndicatorTransparencyValue = 0.6D;
+            this.dragControl.DragStartTransparencyValue = 0.75D;
+            this.dragControl.TargetControl = this.menuStrip1;
+            this.dragControl.UseTransparentDrag = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(241)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(1198, 740);
+            this.ClientSize = new System.Drawing.Size(1198, 626);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tabPanel);
             this.Controls.Add(this.menuStrip1);
@@ -843,5 +857,7 @@
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem hideExtraRequestsToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Timer timerPanel;
+        private Guna.UI2.WinForms.Guna2DragControl dragControl;
     }
 }
