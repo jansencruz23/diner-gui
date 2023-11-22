@@ -1,4 +1,4 @@
-using Diner.CustomEventArgs;
+﻿using Diner.CustomEventArgs;
 using Diner.Models;
 using Diner.UserControls;
 using Guna.UI2.WinForms;
@@ -8,6 +8,7 @@ namespace Diner
     public partial class Form1 : Form
     {
         private List<EntreeControl> _entreeControls;
+        private double _total;
         public Form1()
         {
             _entreeControls = new();
@@ -68,6 +69,7 @@ namespace Diner
             {
                 existingItem.Entree.Quantity++;
                 existingItem.InitializeCart();
+                RefreshTotal();
                 return;
             }
 
@@ -200,5 +202,38 @@ namespace Diner
             { "Tea", ("Tea.jpg", 30) },
             { "Coffee", ("Coffee.jpg", 35) }
         };
+
+        private void panelCart_ControlAdded(object sender, ControlEventArgs e)
+        {
+            RefreshTotal();
+        }
+
+        private void RefreshTotal()
+        {
+            _total = 0;
+            foreach (var cartItem in panelCart.Controls.OfType<CartItem>())
+            {
+                var itemPrice = cartItem.Entree.Quantity * cartItem.Entree.Price;
+                _total += itemPrice;
+                lblPrice.Text = $"₱ {_total}";
+            }
+        }
+
+        private void panelCart_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (panelCart.Controls.Count <= 0)
+            {
+                _total = 0;
+                lblPrice.Text = $"₱ {_total}";
+                return;
+            }
+
+            RefreshTotal();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
