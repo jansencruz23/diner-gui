@@ -91,7 +91,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.Controls.Add(this.btnRemove);
             this.guna2Panel1.Controls.Add(this.picIcon);
             this.guna2Panel1.Controls.Add(this.lblQuantity);
@@ -101,7 +101,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(4, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.BorderRadius = 10;
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 15;
             this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.guna2Panel1.ShadowDecoration.Depth = 10;

@@ -155,7 +155,7 @@ namespace Diner
                 Quantity = 1
             };
 
-            AddOrUpdateSingleItem(entree);
+            AddOrRemoveSingleItem(entree);
         }
 
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -165,7 +165,7 @@ namespace Diner
             if (drinkDetails.TryGetValue(itemName, out var drinkInfo))
             {
                 var itemImage = Image.FromFile($"./Icons/{drinkInfo.imageName}");
-                AddOrUpdateSingleItem(new Entree
+                AddOrRemoveSingleItem(new Entree
                 {
                     Id = 98,
                     Name = itemName,
@@ -176,7 +176,7 @@ namespace Diner
             }
         }
 
-        private void AddOrUpdateSingleItem(Entree entree)
+        private void AddOrRemoveSingleItem(Entree entree)
         {
             var existingItem = panelCart.Controls
                 .OfType<CartItem>()
@@ -234,6 +234,20 @@ namespace Diner
         private void btnPay_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbWater_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbWater.Checked)
+            {
+                AddNewCartItem("Water");
+                return;
+            }
+
+            var cartWater = panelCart.Controls.OfType<CartItem>()
+                .FirstOrDefault(i => i.Entree.Name.Equals("Water"));
+
+            panelCart.Controls.Remove(cartWater);
         }
     }
 }
