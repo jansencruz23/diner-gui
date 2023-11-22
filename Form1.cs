@@ -51,7 +51,7 @@ namespace Diner
                 new EntreeControl(
                     new Entree
                     {
-                        Id = 3,
+                        Id = 4,
                         Image = Image.FromFile("./Icons/Chicken Biryani.jpg"),
                         Name = "Chicken Biryani",
                         Price = 120,
@@ -273,6 +273,17 @@ namespace Diner
                 item.Entree.Quantity = 1;
             }
             panelCart.Controls.Clear();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            if (panelExtra.Size.Height >= 21)
+            {
+                panelExtra.Size = new Size(672, 20);
+                return;
+            }
+
+            panelExtra.Size = new Size(672, 178);
         }
     }
 }
