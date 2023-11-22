@@ -76,3 +76,11 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Reports\Receipt.rdlc
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Chicken Masala.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Chicken Biryani.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Chicken Teriyaki.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Sisig.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Peanut Butter Jelly.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Reuben.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Grilled Cheese.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\French Fries.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Chopsuey.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Pizza.jpg

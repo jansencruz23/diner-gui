@@ -56,7 +56,61 @@ namespace Diner
                         Name = "Chicken Biryani",
                         Price = 120,
                         Quantity = 1
-                    })
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 5,
+                        Image = Image.FromFile("./Icons/Sisig.jpg"),
+                        Name = "Sisig",
+                        Price = 100,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 6,
+                        Image = Image.FromFile("./Icons/Chicken Teriyaki.jpg"),
+                        Name = "Chicken Teriyaki",
+                        Price = 90,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 7,
+                        Image = Image.FromFile("./Icons/Reuben.jpg"),
+                        Name = "Reuben",
+                        Price = 60,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 8,
+                        Image = Image.FromFile("./Icons/French Fries.jpg"),
+                        Name = "French Fries",
+                        Price = 40,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 9,
+                        Image = Image.FromFile("./Icons/Pizza.jpg"),
+                        Name = "Pizza",
+                        Price = 230,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 10,
+                        Image = Image.FromFile("./Icons/Chopsuey.jpg"),
+                        Name = "Chopsuey",
+                        Price = 90,
+                        Quantity = 1
+                    }),
             };
 
             #endregion
@@ -250,6 +304,7 @@ namespace Diner
 
             var receiptForm = new Receipt(entrees);
             receiptForm.ShowDialog();
+            ClearCart();
         }
 
         private void cbWater_CheckedChanged(object sender, EventArgs e)
@@ -268,6 +323,11 @@ namespace Diner
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            ClearCart();
+        }
+
+        private void ClearCart()
+        {
             foreach (var item in panelCart.Controls.OfType<CartItem>())
             {
                 item.Entree.Quantity = 1;
@@ -284,6 +344,24 @@ namespace Diner
             }
 
             panelExtra.Size = new Size(672, 178);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageDialog.Show(this, "Diner GUI Developed by: \n" +
+                "Cruz, Jansen\n" +
+                "Dizon, Aris Justine\n" +
+                "Lloren, Alberto\n" +
+                "Munoz, Nathan Sheary",
+                "Diner GUI OOP10",
+                MessageDialogButtons.OK,
+                MessageDialogIcon.Information,
+                MessageDialogStyle.Dark);
         }
     }
 }

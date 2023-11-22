@@ -39,17 +39,29 @@
             this.reportViewer.Name = "ReportViewer";
             this.reportViewer.Padding = new System.Windows.Forms.Padding(10);
             this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(383, 450);
+            this.reportViewer.ShowBackButton = false;
+            this.reportViewer.ShowContextMenu = false;
+            this.reportViewer.ShowCredentialPrompts = false;
+            this.reportViewer.ShowDocumentMapButton = false;
+            this.reportViewer.ShowFindControls = false;
+            this.reportViewer.ShowParameterPrompts = false;
+            this.reportViewer.ShowProgress = false;
+            this.reportViewer.ShowPromptAreaButton = false;
+            this.reportViewer.ShowStopButton = false;
+            this.reportViewer.Size = new System.Drawing.Size(372, 469);
             this.reportViewer.TabIndex = 0;
+            this.reportViewer.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            this.reportViewer.ZoomPercent = 120;
             // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(270, 362);
-            this.Name = "Receipt";
-            this.Text = "Receipt";
+            this.ClientSize = new System.Drawing.Size(372, 469);
             this.Controls.Add(this.reportViewer);
+            this.Name = "Receipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Receipt";
             this.ResumeLayout(false);
 
         }

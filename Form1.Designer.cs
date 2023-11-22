@@ -29,34 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideExtraRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -114,33 +119,76 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(998, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1198, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.payOrderToolStripMenuItem,
+            this.clearOrderToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(43, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // payOrderToolStripMenuItem
+            // 
+            this.payOrderToolStripMenuItem.Name = "payOrderToolStripMenuItem";
+            this.payOrderToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.payOrderToolStripMenuItem.Text = "Pay Order";
+            this.payOrderToolStripMenuItem.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // clearOrderToolStripMenuItem
+            // 
+            this.clearOrderToolStripMenuItem.Name = "clearOrderToolStripMenuItem";
+            this.clearOrderToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.clearOrderToolStripMenuItem.Text = "Clear Order";
+            this.clearOrderToolStripMenuItem.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hideExtraRequestsToolStripMenuItem});
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
             this.editToolStripMenuItem.Text = "Edit";
             // 
+            // hideExtraRequestsToolStripMenuItem
+            // 
+            this.hideExtraRequestsToolStripMenuItem.Name = "hideExtraRequestsToolStripMenuItem";
+            this.hideExtraRequestsToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.hideExtraRequestsToolStripMenuItem.Text = "Hide/Show Extra Requests";
+            this.hideExtraRequestsToolStripMenuItem.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 21);
             this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // guna2Panel1
             // 
@@ -151,19 +199,20 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.panelPay);
             this.guna2Panel1.Controls.Add(this.panelCart);
-            this.guna2Panel1.CustomizableEdges = customizableEdges31;
+            this.guna2Panel1.CustomizableEdges = customizableEdges7;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(673, 24);
+            this.guna2Panel1.Location = new System.Drawing.Point(844, 24);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            this.guna2Panel1.Size = new System.Drawing.Size(325, 528);
+            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            this.guna2Panel1.Size = new System.Drawing.Size(354, 716);
             this.guna2Panel1.TabIndex = 2;
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Transparent;
             this.btnClear.BorderRadius = 5;
-            this.btnClear.CustomizableEdges = customizableEdges25;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.CustomizableEdges = customizableEdges1;
             this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -171,9 +220,9 @@
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(94)))), ((int)(((byte)(85)))));
             this.btnClear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(224, 12);
+            this.btnClear.Location = new System.Drawing.Point(248, 11);
             this.btnClear.Name = "btnClear";
-            this.btnClear.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            this.btnClear.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.btnClear.Size = new System.Drawing.Size(82, 33);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
@@ -198,24 +247,25 @@
             this.panelPay.Controls.Add(this.btnPay);
             this.panelPay.Controls.Add(this.lblPrice);
             this.panelPay.Controls.Add(this.label4);
-            customizableEdges29.BottomLeft = false;
-            customizableEdges29.BottomRight = false;
-            this.panelPay.CustomizableEdges = customizableEdges29;
+            customizableEdges5.BottomLeft = false;
+            customizableEdges5.BottomRight = false;
+            this.panelPay.CustomizableEdges = customizableEdges5;
             this.panelPay.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.panelPay.Location = new System.Drawing.Point(0, 397);
+            this.panelPay.Location = new System.Drawing.Point(0, 585);
             this.panelPay.Name = "panelPay";
             this.panelPay.ShadowDecoration.BorderRadius = 15;
             this.panelPay.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
-            this.panelPay.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            this.panelPay.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.panelPay.ShadowDecoration.Depth = 10;
-            this.panelPay.Size = new System.Drawing.Size(325, 131);
+            this.panelPay.Size = new System.Drawing.Size(354, 131);
             this.panelPay.TabIndex = 1;
             // 
             // btnPay
             // 
             this.btnPay.BorderRadius = 5;
-            this.btnPay.CustomizableEdges = customizableEdges27;
+            this.btnPay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPay.CustomizableEdges = customizableEdges3;
             this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -225,8 +275,8 @@
             this.btnPay.ForeColor = System.Drawing.Color.White;
             this.btnPay.Location = new System.Drawing.Point(26, 59);
             this.btnPay.Name = "btnPay";
-            this.btnPay.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            this.btnPay.Size = new System.Drawing.Size(266, 48);
+            this.btnPay.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.btnPay.Size = new System.Drawing.Size(304, 48);
             this.btnPay.TabIndex = 2;
             this.btnPay.Text = "Pay Order";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
@@ -235,9 +285,9 @@
             // 
             this.lblPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPrice.ForeColor = System.Drawing.Color.White;
-            this.lblPrice.Location = new System.Drawing.Point(88, 20);
+            this.lblPrice.Location = new System.Drawing.Point(103, 20);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(204, 22);
+            this.lblPrice.Size = new System.Drawing.Size(227, 22);
             this.lblPrice.TabIndex = 1;
             this.lblPrice.Text = "₱ 0";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -261,7 +311,7 @@
             this.panelCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.panelCart.Location = new System.Drawing.Point(0, 57);
             this.panelCart.Name = "panelCart";
-            this.panelCart.Size = new System.Drawing.Size(320, 333);
+            this.panelCart.Size = new System.Drawing.Size(354, 530);
             this.panelCart.TabIndex = 0;
             this.panelCart.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelCart_ControlAdded);
             this.panelCart.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.panelCart_ControlRemoved);
@@ -274,7 +324,7 @@
             this.tabDrinks.Controls.Add(this.groupBox);
             this.tabDrinks.Location = new System.Drawing.Point(4, 44);
             this.tabDrinks.Name = "tabDrinks";
-            this.tabDrinks.Size = new System.Drawing.Size(672, 484);
+            this.tabDrinks.Size = new System.Drawing.Size(840, 672);
             this.tabDrinks.TabIndex = 2;
             this.tabDrinks.Text = "Drink Selections";
             this.toolTip.SetToolTip(this.tabDrinks, "Melk");
@@ -285,11 +335,11 @@
             this.guna2Panel2.BorderRadius = 15;
             this.guna2Panel2.Controls.Add(this.label7);
             this.guna2Panel2.Controls.Add(this.cbWater);
-            this.guna2Panel2.CustomizableEdges = customizableEdges33;
+            this.guna2Panel2.CustomizableEdges = customizableEdges9;
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.guna2Panel2.Location = new System.Drawing.Point(25, 291);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            this.guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.guna2Panel2.Size = new System.Drawing.Size(226, 135);
             this.guna2Panel2.TabIndex = 4;
             // 
@@ -327,12 +377,12 @@
             // guna2Panel7
             // 
             this.guna2Panel7.Controls.Add(this.label6);
-            this.guna2Panel7.CustomizableEdges = customizableEdges35;
+            this.guna2Panel7.CustomizableEdges = customizableEdges11;
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel7.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            this.guna2Panel7.Size = new System.Drawing.Size(672, 41);
+            this.guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.guna2Panel7.Size = new System.Drawing.Size(840, 41);
             this.guna2Panel7.TabIndex = 3;
             // 
             // label6
@@ -358,13 +408,13 @@
             this.groupBox.Controls.Add(this.rbJuice);
             this.groupBox.Controls.Add(this.rbMilk);
             this.groupBox.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.groupBox.CustomizableEdges = customizableEdges37;
+            this.groupBox.CustomizableEdges = customizableEdges13;
             this.groupBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.groupBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox.ForeColor = System.Drawing.Color.White;
             this.groupBox.Location = new System.Drawing.Point(25, 70);
             this.groupBox.Name = "groupBox";
-            this.groupBox.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            this.groupBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
             this.groupBox.Size = new System.Drawing.Size(616, 184);
             this.groupBox.TabIndex = 1;
             this.groupBox.Text = "Drinks (choose one)";
@@ -511,19 +561,19 @@
             this.tabEntree.Location = new System.Drawing.Point(4, 44);
             this.tabEntree.Margin = new System.Windows.Forms.Padding(0);
             this.tabEntree.Name = "tabEntree";
-            this.tabEntree.Size = new System.Drawing.Size(672, 484);
+            this.tabEntree.Size = new System.Drawing.Size(840, 672);
             this.tabEntree.TabIndex = 0;
             this.tabEntree.Text = "Entree Selection";
             // 
             // guna2Panel5
             // 
             this.guna2Panel5.Controls.Add(this.panelItem);
-            this.guna2Panel5.CustomizableEdges = customizableEdges39;
+            this.guna2Panel5.CustomizableEdges = customizableEdges15;
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel5.Location = new System.Drawing.Point(0, 49);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            this.guna2Panel5.Size = new System.Drawing.Size(672, 257);
+            this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            this.guna2Panel5.Size = new System.Drawing.Size(840, 445);
             this.guna2Panel5.TabIndex = 2;
             // 
             // panelItem
@@ -534,7 +584,7 @@
             this.panelItem.Location = new System.Drawing.Point(0, 0);
             this.panelItem.Margin = new System.Windows.Forms.Padding(0);
             this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(672, 257);
+            this.panelItem.Size = new System.Drawing.Size(840, 445);
             this.panelItem.TabIndex = 0;
             // 
             // panelExtra
@@ -546,25 +596,25 @@
             this.panelExtra.Controls.Add(this.label3);
             this.panelExtra.Controls.Add(this.label2);
             this.panelExtra.Controls.Add(this.lbSauce);
-            customizableEdges45.BottomLeft = false;
-            customizableEdges45.BottomRight = false;
-            this.panelExtra.CustomizableEdges = customizableEdges45;
+            customizableEdges21.BottomLeft = false;
+            customizableEdges21.BottomRight = false;
+            this.panelExtra.CustomizableEdges = customizableEdges21;
             this.panelExtra.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelExtra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.panelExtra.Location = new System.Drawing.Point(0, 306);
+            this.panelExtra.Location = new System.Drawing.Point(0, 494);
             this.panelExtra.Margin = new System.Windows.Forms.Padding(0);
             this.panelExtra.Name = "panelExtra";
             this.panelExtra.ShadowDecoration.BorderRadius = 15;
             this.panelExtra.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
-            this.panelExtra.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            this.panelExtra.ShadowDecoration.CustomizableEdges = customizableEdges22;
             this.panelExtra.ShadowDecoration.Depth = 10;
-            this.panelExtra.Size = new System.Drawing.Size(672, 178);
+            this.panelExtra.Size = new System.Drawing.Size(840, 178);
             this.panelExtra.TabIndex = 1;
             // 
             // btnMinimize
             // 
             this.btnMinimize.BorderRadius = 3;
-            this.btnMinimize.CustomizableEdges = customizableEdges41;
+            this.btnMinimize.CustomizableEdges = customizableEdges17;
             this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -572,9 +622,11 @@
             this.btnMinimize.FillColor = System.Drawing.Color.DimGray;
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(308, 10);
+            this.btnMinimize.Location = new System.Drawing.Point(396, 10);
+            this.btnMinimize.MaximumSize = new System.Drawing.Size(46, 5);
+            this.btnMinimize.MinimumSize = new System.Drawing.Size(46, 5);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            this.btnMinimize.ShadowDecoration.CustomizableEdges = customizableEdges18;
             this.btnMinimize.Size = new System.Drawing.Size(46, 5);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -583,7 +635,7 @@
             // 
             this.cbRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.cbRequest.BorderRadius = 5;
-            this.cbRequest.CustomizableEdges = customizableEdges43;
+            this.cbRequest.CustomizableEdges = customizableEdges19;
             this.cbRequest.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbRequest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRequest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
@@ -598,9 +650,9 @@
             "Seedless Rye",
             "Pita",
             "Sour Dough"});
-            this.cbRequest.Location = new System.Drawing.Point(278, 56);
+            this.cbRequest.Location = new System.Drawing.Point(280, 56);
             this.cbRequest.Name = "cbRequest";
-            this.cbRequest.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            this.cbRequest.ShadowDecoration.CustomizableEdges = customizableEdges20;
             this.cbRequest.Size = new System.Drawing.Size(191, 36);
             this.cbRequest.TabIndex = 0;
             this.cbRequest.SelectedIndexChanged += new System.EventHandler(this.cbRequest_SelectedIndexChanged);
@@ -650,15 +702,15 @@
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.CustomizableEdges = customizableEdges47;
+            this.guna2Panel3.CustomizableEdges = customizableEdges23;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.guna2Panel3.ForeColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            this.guna2Panel3.Size = new System.Drawing.Size(672, 49);
+            this.guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            this.guna2Panel3.Size = new System.Drawing.Size(840, 49);
             this.guna2Panel3.TabIndex = 0;
             // 
             // label1
@@ -686,7 +738,7 @@
             this.tabPanel.Padding = new System.Drawing.Point(0, 0);
             this.tabPanel.RightToLeftLayout = true;
             this.tabPanel.SelectedIndex = 0;
-            this.tabPanel.Size = new System.Drawing.Size(680, 532);
+            this.tabPanel.Size = new System.Drawing.Size(848, 720);
             this.tabPanel.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabPanel.TabButtonHoverState.FillColor = System.Drawing.Color.Black;
             this.tabPanel.TabButtonHoverState.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -714,7 +766,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(241)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(998, 552);
+            this.ClientSize = new System.Drawing.Size(1198, 740);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tabPanel);
             this.Controls.Add(this.menuStrip1);
@@ -786,5 +838,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label label7;
         private Guna.UI2.WinForms.Guna2Button btnMinimize;
+        private ToolStripMenuItem payOrderToolStripMenuItem;
+        private ToolStripMenuItem clearOrderToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem hideExtraRequestsToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

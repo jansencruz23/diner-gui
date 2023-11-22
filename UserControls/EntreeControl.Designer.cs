@@ -57,12 +57,11 @@
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(13, 134);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 18);
+            this.lblName.Size = new System.Drawing.Size(146, 18);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Meal ";
             // 
@@ -84,6 +83,7 @@
             this.guna2Panel1.Controls.Add(this.picIcon);
             this.guna2Panel1.Controls.Add(this.lblPrice);
             this.guna2Panel1.Controls.Add(this.lblName);
+            this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Panel1.CustomizableEdges = customizableEdges3;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));

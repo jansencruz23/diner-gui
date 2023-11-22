@@ -60,23 +60,21 @@
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(94, 24);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(56, 18);
+            this.lblName.Size = new System.Drawing.Size(164, 18);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "label1";
             // 
             // lblPrice
             // 
-            this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPrice.ForeColor = System.Drawing.Color.White;
             this.lblPrice.Location = new System.Drawing.Point(94, 47);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(41, 15);
+            this.lblPrice.Size = new System.Drawing.Size(149, 15);
             this.lblPrice.TabIndex = 2;
             this.lblPrice.Text = "label2";
             // 
@@ -85,7 +83,7 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblQuantity.ForeColor = System.Drawing.Color.White;
-            this.lblQuantity.Location = new System.Drawing.Point(248, 48);
+            this.lblQuantity.Location = new System.Drawing.Point(272, 46);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(22, 15);
             this.lblQuantity.TabIndex = 3;
@@ -109,12 +107,13 @@
             this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.guna2Panel1.ShadowDecoration.Depth = 10;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 4, 6, 6);
-            this.guna2Panel1.Size = new System.Drawing.Size(281, 85);
+            this.guna2Panel1.Size = new System.Drawing.Size(311, 85);
             this.guna2Panel1.TabIndex = 4;
             // 
             // btnRemove
             // 
             this.btnRemove.BorderRadius = 5;
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemove.CustomizableEdges = customizableEdges3;
             this.btnRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -123,7 +122,7 @@
             this.btnRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(94)))), ((int)(((byte)(85)))));
             this.btnRemove.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(237, 19);
+            this.btnRemove.Location = new System.Drawing.Point(261, 17);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(0);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -141,7 +140,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.Name = "CartItem";
-            this.Size = new System.Drawing.Size(288, 91);
+            this.Size = new System.Drawing.Size(318, 91);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
