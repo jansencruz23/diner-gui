@@ -36,18 +36,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,8 +56,14 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabDrinks = new System.Windows.Forms.TabPage();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2ImageRadioButton1 = new Guna.UI2.WinForms.Guna2ImageRadioButton();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.groupBox = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.rbCoffee = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbTea = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbLemonade = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbSoda = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbJuice = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbMilk = new Guna.UI2.WinForms.Guna2RadioButton();
             this.tabEntree = new System.Windows.Forms.TabPage();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelItem = new System.Windows.Forms.FlowLayoutPanel();
@@ -75,7 +79,7 @@
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.tabDrinks.SuspendLayout();
-            this.guna2GroupBox1.SuspendLayout();
+            this.groupBox.SuspendLayout();
             this.tabEntree.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -173,7 +177,8 @@
             // 
             // tabDrinks
             // 
-            this.tabDrinks.Controls.Add(this.guna2GroupBox1);
+            this.tabDrinks.Controls.Add(this.guna2CheckBox1);
+            this.tabDrinks.Controls.Add(this.groupBox);
             this.tabDrinks.Location = new System.Drawing.Point(184, 4);
             this.tabDrinks.Name = "tabDrinks";
             this.tabDrinks.Size = new System.Drawing.Size(488, 532);
@@ -181,31 +186,154 @@
             this.tabDrinks.Text = "Drink Selections";
             this.tabDrinks.UseVisualStyleBackColor = true;
             // 
-            // guna2GroupBox1
+            // guna2CheckBox1
             // 
-            this.guna2GroupBox1.Controls.Add(this.guna2ImageRadioButton1);
-            this.guna2GroupBox1.CustomizableEdges = customizableEdges10;
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(23, 41);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(427, 286);
-            this.guna2GroupBox1.TabIndex = 1;
-            this.guna2GroupBox1.Text = "guna2GroupBox1";
+            this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.Location = new System.Drawing.Point(41, 431);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(57, 19);
+            this.guna2CheckBox1.TabIndex = 2;
+            this.guna2CheckBox1.Text = "Water";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
-            // guna2ImageRadioButton1
+            // groupBox
             // 
-            this.guna2ImageRadioButton1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2ImageRadioButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageRadioButton1.Image")));
-            this.guna2ImageRadioButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageRadioButton1.ImageRotate = 0F;
-            this.guna2ImageRadioButton1.ImageSize = new System.Drawing.Size(200, 200);
-            this.guna2ImageRadioButton1.Location = new System.Drawing.Point(18, 60);
-            this.guna2ImageRadioButton1.Name = "guna2ImageRadioButton1";
-            this.guna2ImageRadioButton1.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            this.guna2ImageRadioButton1.Size = new System.Drawing.Size(165, 107);
-            this.guna2ImageRadioButton1.TabIndex = 0;
+            this.groupBox.Controls.Add(this.rbCoffee);
+            this.groupBox.Controls.Add(this.rbTea);
+            this.groupBox.Controls.Add(this.rbLemonade);
+            this.groupBox.Controls.Add(this.rbSoda);
+            this.groupBox.Controls.Add(this.rbJuice);
+            this.groupBox.Controls.Add(this.rbMilk);
+            this.groupBox.CustomizableEdges = customizableEdges9;
+            this.groupBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.groupBox.Location = new System.Drawing.Point(23, 41);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            this.groupBox.Size = new System.Drawing.Size(427, 286);
+            this.groupBox.TabIndex = 1;
+            this.groupBox.Text = "Drinks";
+            // 
+            // rbCoffee
+            // 
+            this.rbCoffee.AutoSize = true;
+            this.rbCoffee.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbCoffee.CheckedState.BorderThickness = 0;
+            this.rbCoffee.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbCoffee.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbCoffee.CheckedState.InnerOffset = -4;
+            this.rbCoffee.Location = new System.Drawing.Point(213, 122);
+            this.rbCoffee.Name = "rbCoffee";
+            this.rbCoffee.Size = new System.Drawing.Size(60, 19);
+            this.rbCoffee.TabIndex = 5;
+            this.rbCoffee.Text = "Coffee";
+            this.rbCoffee.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbCoffee.UncheckedState.BorderThickness = 2;
+            this.rbCoffee.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbCoffee.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbCoffee.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rbTea
+            // 
+            this.rbTea.AutoSize = true;
+            this.rbTea.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbTea.CheckedState.BorderThickness = 0;
+            this.rbTea.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbTea.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbTea.CheckedState.InnerOffset = -4;
+            this.rbTea.Location = new System.Drawing.Point(213, 97);
+            this.rbTea.Name = "rbTea";
+            this.rbTea.Size = new System.Drawing.Size(42, 19);
+            this.rbTea.TabIndex = 4;
+            this.rbTea.Text = "Tea";
+            this.rbTea.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbTea.UncheckedState.BorderThickness = 2;
+            this.rbTea.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbTea.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbTea.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rbLemonade
+            // 
+            this.rbLemonade.AutoSize = true;
+            this.rbLemonade.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbLemonade.CheckedState.BorderThickness = 0;
+            this.rbLemonade.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbLemonade.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbLemonade.CheckedState.InnerOffset = -4;
+            this.rbLemonade.Location = new System.Drawing.Point(213, 72);
+            this.rbLemonade.Name = "rbLemonade";
+            this.rbLemonade.Size = new System.Drawing.Size(81, 19);
+            this.rbLemonade.TabIndex = 3;
+            this.rbLemonade.Text = "Lemonade";
+            this.rbLemonade.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbLemonade.UncheckedState.BorderThickness = 2;
+            this.rbLemonade.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbLemonade.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbLemonade.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rbSoda
+            // 
+            this.rbSoda.AutoSize = true;
+            this.rbSoda.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbSoda.CheckedState.BorderThickness = 0;
+            this.rbSoda.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbSoda.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbSoda.CheckedState.InnerOffset = -4;
+            this.rbSoda.Location = new System.Drawing.Point(34, 122);
+            this.rbSoda.Name = "rbSoda";
+            this.rbSoda.Size = new System.Drawing.Size(51, 19);
+            this.rbSoda.TabIndex = 2;
+            this.rbSoda.Text = "Soda";
+            this.rbSoda.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbSoda.UncheckedState.BorderThickness = 2;
+            this.rbSoda.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbSoda.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbSoda.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rbJuice
+            // 
+            this.rbJuice.AutoSize = true;
+            this.rbJuice.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbJuice.CheckedState.BorderThickness = 0;
+            this.rbJuice.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbJuice.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbJuice.CheckedState.InnerOffset = -4;
+            this.rbJuice.Location = new System.Drawing.Point(34, 97);
+            this.rbJuice.Name = "rbJuice";
+            this.rbJuice.Size = new System.Drawing.Size(51, 19);
+            this.rbJuice.TabIndex = 1;
+            this.rbJuice.Text = "Juice";
+            this.rbJuice.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbJuice.UncheckedState.BorderThickness = 2;
+            this.rbJuice.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbJuice.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbJuice.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rbMilk
+            // 
+            this.rbMilk.AutoSize = true;
+            this.rbMilk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbMilk.CheckedState.BorderThickness = 0;
+            this.rbMilk.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbMilk.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbMilk.CheckedState.InnerOffset = -4;
+            this.rbMilk.Location = new System.Drawing.Point(34, 72);
+            this.rbMilk.Name = "rbMilk";
+            this.rbMilk.Size = new System.Drawing.Size(48, 19);
+            this.rbMilk.TabIndex = 0;
+            this.rbMilk.Text = "Milk";
+            this.rbMilk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbMilk.UncheckedState.BorderThickness = 2;
+            this.rbMilk.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbMilk.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbMilk.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // tabEntree
             // 
@@ -223,11 +351,11 @@
             // guna2Panel5
             // 
             this.guna2Panel5.Controls.Add(this.panelItem);
-            this.guna2Panel5.CustomizableEdges = customizableEdges12;
+            this.guna2Panel5.CustomizableEdges = customizableEdges11;
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel5.Location = new System.Drawing.Point(0, 41);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.guna2Panel5.Size = new System.Drawing.Size(488, 319);
             this.guna2Panel5.TabIndex = 2;
             // 
@@ -246,18 +374,18 @@
             this.guna2Panel4.Controls.Add(this.label3);
             this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.Controls.Add(this.lbSauce);
-            this.guna2Panel4.CustomizableEdges = customizableEdges16;
+            this.guna2Panel4.CustomizableEdges = customizableEdges15;
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 360);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            this.guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges16;
             this.guna2Panel4.Size = new System.Drawing.Size(488, 172);
             this.guna2Panel4.TabIndex = 1;
             // 
             // cbRequest
             // 
             this.cbRequest.BackColor = System.Drawing.Color.Transparent;
-            this.cbRequest.CustomizableEdges = customizableEdges14;
+            this.cbRequest.CustomizableEdges = customizableEdges13;
             this.cbRequest.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbRequest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRequest.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -273,7 +401,7 @@
             "Sour Dough"});
             this.cbRequest.Location = new System.Drawing.Point(265, 53);
             this.cbRequest.Name = "cbRequest";
-            this.cbRequest.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            this.cbRequest.ShadowDecoration.CustomizableEdges = customizableEdges14;
             this.cbRequest.Size = new System.Drawing.Size(191, 36);
             this.cbRequest.TabIndex = 0;
             this.cbRequest.SelectedIndexChanged += new System.EventHandler(this.cbRequest_SelectedIndexChanged);
@@ -317,11 +445,11 @@
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.CustomizableEdges = customizableEdges18;
+            this.guna2Panel3.CustomizableEdges = customizableEdges17;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            this.guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
             this.guna2Panel3.Size = new System.Drawing.Size(488, 41);
             this.guna2Panel3.TabIndex = 0;
             // 
@@ -388,7 +516,9 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.tabDrinks.ResumeLayout(false);
-            this.guna2GroupBox1.ResumeLayout(false);
+            this.tabDrinks.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.tabEntree.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
@@ -409,8 +539,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private TabPage tabDrinks;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2ImageRadioButton guna2ImageRadioButton1;
+        private Guna.UI2.WinForms.Guna2GroupBox groupBox;
         private TabPage tabEntree;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2ComboBox cbRequest;
@@ -425,5 +554,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private FlowLayoutPanel panelCart;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private Guna.UI2.WinForms.Guna2RadioButton rbCoffee;
+        private Guna.UI2.WinForms.Guna2RadioButton rbTea;
+        private Guna.UI2.WinForms.Guna2RadioButton rbLemonade;
+        private Guna.UI2.WinForms.Guna2RadioButton rbSoda;
+        private Guna.UI2.WinForms.Guna2RadioButton rbJuice;
+        private Guna.UI2.WinForms.Guna2RadioButton rbMilk;
     }
 }

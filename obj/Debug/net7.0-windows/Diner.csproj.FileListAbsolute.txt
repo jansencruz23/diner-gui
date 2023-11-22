@@ -33,3 +33,9 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Seedless Rye.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Sour Dough.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Whole Wheat.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Coffee.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Juice.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Lemonade.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Milk.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Soda.jpg
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Tea.jpg

@@ -1,6 +1,7 @@
 using Diner.CustomEventArgs;
 using Diner.Models;
 using Diner.UserControls;
+using Guna.UI2.WinForms;
 
 namespace Diner
 {
@@ -106,8 +107,6 @@ namespace Diner
                             Quantity = 1
                         }));
             }
-
-
         }
 
         private void cbRequest_SelectedIndexChanged(object sender, EventArgs e)
@@ -133,6 +132,81 @@ namespace Diner
                         Price = 0,
                         Quantity = 1
                     }));
+        }
+
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            var drinks = new List<EntreeControl>
+            {
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 98,
+                        Image = Image.FromFile("./Icons/Milk.jpg"),
+                        Name = "Milk",
+                        Price = 15,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 98,
+                        Image = Image.FromFile("./Icons/Juice.jpg"),
+                        Name = "Juice",
+                        Price = 15,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 98,
+                        Image = Image.FromFile("./Icons/Soda.jpg"),
+                        Name = "Soda",
+                        Price = 25,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 98,
+                        Image = Image.FromFile("./Icons/Lemonade.jpg"),
+                        Name = "Lemonade",
+                        Price = 30,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 98,
+                        Image = Image.FromFile("./Icons/Tea.jpg"),
+                        Name = "Tea",
+                        Price = 30,
+                        Quantity = 1
+                    }),
+                new EntreeControl(
+                    new Entree
+                    {
+                        Id = 98,
+                        Image = Image.FromFile("./Icons/Coffee.jpg"),
+                        Name = "Coffee",
+                        Price = 35,
+                        Quantity = 1
+                    })
+            };
+
+            var itemName = (sender as Guna2RadioButton).Text;
+
+            var existingItem = panelCart.Controls
+                .OfType<CartItem>()
+                .FirstOrDefault(cart => cart.Entree.Id == 98);
+
+            if (existingItem != null)
+            {
+                panelCart.Controls.Remove(existingItem);
+            }
+
+            var drink = drinks.FirstOrDefault(i => i.Entree.Name.Equals(itemName));
+            panelCart.Controls.Add(new CartItem(drink.Entree));
         }
     }
 }
