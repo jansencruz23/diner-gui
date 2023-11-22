@@ -71,8 +71,15 @@ namespace Diner
                 return;
             }
 
-            panelCart.Controls.Add(
-                new CartItem(e.EntreeControl.Entree));
+            var cartItem = new CartItem(e.EntreeControl.Entree);
+            cartItem.RemoveFromCartClicked += RemoveFromCart_Clicked!;
+            panelCart.Controls.Add(cartItem);
+        }
+
+        private void RemoveFromCart_Clicked(object sender, CartItemEventArgs e)
+        {
+            panelCart.Controls.Remove(e.CartItem);
+            e.CartItem.Entree.Quantity = 1;
         }
 
         private void lbSauce_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,15 +112,17 @@ namespace Diner
 
         private void AddNewCartItem(string itemName)
         {
-            panelCart.Controls.Add(
-                new CartItem(
+            var cartItem = new CartItem(
                     new Entree
                     {
                         Name = itemName,
                         Image = Image.FromFile($"./Icons/{itemName}.jpg"),
                         Price = 0,
                         Quantity = 1
-                    }));
+                    });
+
+            cartItem.RemoveFromCartClicked += RemoveFromCart_Clicked!;
+            panelCart.Controls.Add(cartItem);
         }
 
         private CartItem GetExistingCartItem(string itemName)
@@ -176,7 +185,10 @@ namespace Diner
                 panelCart.Controls.Remove(existingItem);
             }
 
-            panelCart.Controls.Add(new CartItem(entree));
+            var cartItem = new CartItem(entree);
+            cartItem.RemoveFromCartClicked += RemoveFromCart_Clicked!;
+
+            panelCart.Controls.Add(cartItem);
         }
 
         private readonly Dictionary<string, (string imageName, int price)> drinkDetails = new Dictionary<string, (string, int)>

@@ -30,6 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.picIcon = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -37,6 +39,7 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +62,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(94, 25);
+            this.lblName.Location = new System.Drawing.Point(94, 27);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(56, 18);
             this.lblName.TabIndex = 1;
@@ -69,7 +72,7 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPrice.Location = new System.Drawing.Point(94, 45);
+            this.lblPrice.Location = new System.Drawing.Point(94, 47);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 15);
             this.lblPrice.TabIndex = 2;
@@ -79,7 +82,7 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantity.Location = new System.Drawing.Point(242, 45);
+            this.lblQuantity.Location = new System.Drawing.Point(242, 49);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(22, 15);
             this.lblQuantity.TabIndex = 3;
@@ -89,23 +92,44 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.Controls.Add(this.btnRemove);
             this.guna2Panel1.Controls.Add(this.picIcon);
             this.guna2Panel1.Controls.Add(this.lblQuantity);
             this.guna2Panel1.Controls.Add(this.lblName);
             this.guna2Panel1.Controls.Add(this.lblPrice);
-            this.guna2Panel1.CustomizableEdges = customizableEdges3;
+            this.guna2Panel1.CustomizableEdges = customizableEdges5;
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(4, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.BorderRadius = 10;
             this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
-            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.guna2Panel1.ShadowDecoration.Depth = 10;
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 4, 6, 6);
             this.guna2Panel1.Size = new System.Drawing.Size(281, 85);
             this.guna2Panel1.TabIndex = 4;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BorderRadius = 5;
+            this.btnRemove.CustomizableEdges = customizableEdges3;
+            this.btnRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRemove.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(229, 19);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.btnRemove.Size = new System.Drawing.Size(35, 24);
+            this.btnRemove.TabIndex = 4;
+            this.btnRemove.Text = "-";
+            this.btnRemove.TextOffset = new System.Drawing.Point(1, -8);
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // CartItem
             // 
@@ -129,5 +153,6 @@
         private Label lblPrice;
         private Label lblQuantity;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnRemove;
     }
 }
