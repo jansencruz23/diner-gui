@@ -4,8 +4,11 @@ namespace Diner.Forms
 {
     public partial class AdminForm : Form
     {
+        private bool _menuExpand;
         private bool _entreeExpand;
         private bool _drinksExpand;
+        private bool _sauceExpand;
+        private bool _requestExpand;
 
         public AdminForm()
         {
@@ -14,12 +17,83 @@ namespace Diner.Forms
 
         private void btnEntree_Click(object sender, EventArgs e)
         {
-            timerEntree.Start();
+            timerEntrees.Start();
+            CheckMenuExpand();
+            ColorButton(btnEntree);
+            CloseTabs(ref _drinksExpand, timerDrinks);
+            CloseTabs(ref _sauceExpand, timerSauces);
+            CloseTabs(ref _requestExpand, timerRequests);
+        }
+
+        private void btnDrinks_Click(object sender, EventArgs e)
+        {
+            timerDrinks.Start();
+            CheckMenuExpand();
+            ColorButton(btnDrinks);
+            CloseTabs(ref _entreeExpand, timerEntrees);
+            CloseTabs(ref _sauceExpand, timerSauces);
+            CloseTabs(ref _requestExpand, timerRequests);
+        }
+
+        private void btnSauce_Click(object sender, EventArgs e)
+        {
+            timerSauces.Start();
+            CheckMenuExpand();
+            ColorButton(btnSauce);
+            CloseTabs(ref _entreeExpand, timerEntrees);
+            CloseTabs(ref _drinksExpand, timerDrinks);
+            CloseTabs(ref _requestExpand, timerRequests);
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            timerRequests.Start();
+            CheckMenuExpand();
+            ColorButton(btnRequest);
+            CloseTabs(ref _entreeExpand, timerEntrees);
+            CloseTabs(ref _drinksExpand, timerDrinks);
+            CloseTabs(ref _sauceExpand, timerSauces);
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            timerMenu.Start();
+        }
+
+        private void CloseTabs(ref bool expand, System.Windows.Forms.Timer timer)
+        {
+            if (!expand)
+            {
+                timer.Start();
+            }
+        }
+
+        private void CheckMenuExpand()
+        {
+            if (_menuExpand)
+            {
+                timerMenu.Start();
+            }
+        }
+
+        private void timerMenu_Tick(object sender, EventArgs e)
+        {
+            ExpandMenu();
+        }
+
+        private void timerSauces_Tick(object sender, EventArgs e)
+        {
+            ExpandPanel(panelSauce, ref _sauceExpand, timerSauces);
+        }
+
+        private void timerRequests_Tick(object sender, EventArgs e)
+        {
+            ExpandPanel(panelRequest, ref _requestExpand, timerRequests);
         }
 
         private void timerEntree_Tick(object sender, EventArgs e)
         {
-            ExpandPanel(panelEntree, ref _entreeExpand, timerEntree);
+            ExpandPanel(panelEntree, ref _entreeExpand, timerEntrees);
         }
 
         private void timerDrinks_Tick(object sender, EventArgs e)
@@ -41,9 +115,30 @@ namespace Diner.Forms
             }
         }
 
-        private void btnDrinks_Click(object sender, EventArgs e)
+        private void ExpandMenu()
         {
-            timerDrinks.Start();
+            var change = _menuExpand ? 10 : -10;
+            flowPanelMenu.Width += change;
+
+            if ((_menuExpand && flowPanelMenu.Width >= flowPanelMenu.MaximumSize.Width)
+                || (!_menuExpand && flowPanelMenu.Width <= flowPanelMenu.MinimumSize.Width))
+            {
+                _menuExpand = !_menuExpand;
+                timerMenu.Stop();
+            }
+        }
+
+        private void ColorButton(Guna2Button button)
+        {
+            var selectedColor = Color.FromArgb(32, 32, 42);
+            var defaultColor = Color.FromArgb(23, 23, 31);
+
+            btnEntree.FillColor = defaultColor;
+            btnDrinks.FillColor = defaultColor;
+            btnSauce.FillColor = defaultColor;
+            btnRequest.FillColor = defaultColor;
+
+            button.FillColor = selectedColor;
         }
     }
 }

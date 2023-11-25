@@ -10,14 +10,17 @@
     <Compile Update="Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControls\CartItem.cs">
+    <Compile Update="Forms\UserControls\CartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\EntreeControl.cs">
+    <Compile Update="Forms\UserControls\EntreeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Forms\MainForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\EntreesView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>
