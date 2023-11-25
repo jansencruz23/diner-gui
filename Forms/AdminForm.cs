@@ -1,4 +1,7 @@
-﻿using Guna.UI2.WinForms;
+﻿using Diner.CustomEventArgs;
+using Diner.Forms.UserControls;
+using Diner.Models;
+using Guna.UI2.WinForms;
 
 namespace Diner.Forms
 {
@@ -10,9 +13,16 @@ namespace Diner.Forms
         private bool _sauceExpand;
         private bool _requestExpand;
 
-        public AdminForm()
+        private List<Entree> _entrees;
+        private List<EntreeControl> _entreeControls;
+
+        public AdminForm(List<Entree> entree)
         {
+            _entrees = entree;
+            _entreeControls = new();
             InitializeComponent();
+            PopulateEntreeControl();
+            panelBody.Controls.Add(new EntreesView(_entreeControls));
         }
 
         private void btnEntree_Click(object sender, EventArgs e)
@@ -23,7 +33,67 @@ namespace Diner.Forms
             CloseTabs(ref _drinksExpand, timerDrinks);
             CloseTabs(ref _sauceExpand, timerSauces);
             CloseTabs(ref _requestExpand, timerRequests);
+
+            PopulateEntreeControl();
+            panelBody.Controls.Add(new EntreesView(_entreeControls));
         }
+
+        private void PopulateEntreeControl()
+        {
+            _entreeControls.Clear();
+            panelBody.Controls.Clear();
+            foreach (var entree in _entrees)
+            {
+                var entreeControl = new EntreeControl(entree);
+                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
+                _entreeControls.Add(entreeControl);
+            }
+        }
+
+        private void EntreeControl_EditEntreeClicked(object? sender, EntreeControlEventArgs e)
+        {
+            var editForm = new EditForm(e.EntreeControl.Entree);
+            editForm.EntreeEdited += EntreeEdited;
+            editForm.ShowDialog();
+        }
+
+        private void EntreeEdited(object? sender, EntreeEventArgs e)
+        {
+            var entree = _entrees.FirstOrDefault(i => e.Entree.Id == i.Id);
+            
+            if (entree != null)
+            {
+                _entrees.Remove(entree);
+                _entrees.Add(e.Entree);
+            }
+
+            PopulateEntreeControl();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void btnDrinks_Click(object sender, EventArgs e)
         {
@@ -139,6 +209,14 @@ namespace Diner.Forms
             btnRequest.FillColor = defaultColor;
 
             button.FillColor = selectedColor;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var form = new MainForm(_entrees);
+            form.FormClosed += (s, args) => Close();
+            form.Show();
         }
     }
 }

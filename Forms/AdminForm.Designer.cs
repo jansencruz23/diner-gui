@@ -76,6 +76,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.flowPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
@@ -85,14 +87,14 @@
             this.btnAddEntree = new Guna.UI2.WinForms.Guna2Button();
             this.btnEntree = new Guna.UI2.WinForms.Guna2Button();
             this.panelSauce = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteSauce = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateSauce = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddSauce = new Guna.UI2.WinForms.Guna2Button();
             this.btnSauce = new Guna.UI2.WinForms.Guna2Button();
             this.panelRequest = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteRequest = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateRequest = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddRequest = new Guna.UI2.WinForms.Guna2Button();
             this.btnRequest = new Guna.UI2.WinForms.Guna2Button();
             this.panelDrinks = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDeleteDrink = new Guna.UI2.WinForms.Guna2Button();
@@ -105,6 +107,7 @@
             this.timerSauces = new System.Windows.Forms.Timer(this.components);
             this.timerRequests = new System.Windows.Forms.Timer(this.components);
             this.timerMenu = new System.Windows.Forms.Timer(this.components);
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.flowPanelMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelEntree.SuspendLayout();
@@ -115,19 +118,20 @@
             // 
             // flowPanelMenu
             // 
+            this.flowPanelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.flowPanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.flowPanelMenu.Controls.Add(this.panelMenu);
             this.flowPanelMenu.Controls.Add(this.panelEntree);
             this.flowPanelMenu.Controls.Add(this.panelSauce);
             this.flowPanelMenu.Controls.Add(this.panelRequest);
             this.flowPanelMenu.Controls.Add(this.panelDrinks);
-            this.flowPanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowPanelMenu.Location = new System.Drawing.Point(0, 0);
             this.flowPanelMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.flowPanelMenu.MaximumSize = new System.Drawing.Size(200, 450);
-            this.flowPanelMenu.MinimumSize = new System.Drawing.Size(59, 4000);
+            this.flowPanelMenu.MaximumSize = new System.Drawing.Size(200, 4000);
+            this.flowPanelMenu.MinimumSize = new System.Drawing.Size(59, 400);
             this.flowPanelMenu.Name = "flowPanelMenu";
-            this.flowPanelMenu.Size = new System.Drawing.Size(200, 4000);
+            this.flowPanelMenu.Size = new System.Drawing.Size(200, 400);
             this.flowPanelMenu.TabIndex = 0;
             // 
             // panelMenu
@@ -279,9 +283,9 @@
             // 
             // panelSauce
             // 
-            this.panelSauce.Controls.Add(this.guna2Button1);
-            this.panelSauce.Controls.Add(this.guna2Button2);
-            this.panelSauce.Controls.Add(this.guna2Button3);
+            this.panelSauce.Controls.Add(this.btnDeleteSauce);
+            this.panelSauce.Controls.Add(this.btnUpdateSauce);
+            this.panelSauce.Controls.Add(this.btnAddSauce);
             this.panelSauce.Controls.Add(this.btnSauce);
             this.panelSauce.CustomizableEdges = customizableEdges23;
             this.panelSauce.Location = new System.Drawing.Point(0, 105);
@@ -293,77 +297,77 @@
             this.panelSauce.Size = new System.Drawing.Size(200, 45);
             this.panelSauce.TabIndex = 3;
             // 
-            // guna2Button1
+            // btnDeleteSauce
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.CustomizableEdges = customizableEdges15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 133);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            this.guna2Button1.Size = new System.Drawing.Size(200, 46);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Delete Sauce";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnDeleteSauce.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSauce.CustomizableEdges = customizableEdges15;
+            this.btnDeleteSauce.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteSauce.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteSauce.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteSauce.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteSauce.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnDeleteSauce.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteSauce.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteSauce.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteSauce.Image")));
+            this.btnDeleteSauce.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeleteSauce.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnDeleteSauce.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnDeleteSauce.Location = new System.Drawing.Point(0, 133);
+            this.btnDeleteSauce.Name = "btnDeleteSauce";
+            this.btnDeleteSauce.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            this.btnDeleteSauce.Size = new System.Drawing.Size(200, 46);
+            this.btnDeleteSauce.TabIndex = 5;
+            this.btnDeleteSauce.Text = "Delete Sauce";
+            this.btnDeleteSauce.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeleteSauce.TextOffset = new System.Drawing.Point(35, 0);
             // 
-            // guna2Button2
+            // btnUpdateSauce
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.CustomizableEdges = customizableEdges17;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 88);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            this.guna2Button2.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button2.TabIndex = 4;
-            this.guna2Button2.Text = "Update Sauce";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnUpdateSauce.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateSauce.CustomizableEdges = customizableEdges17;
+            this.btnUpdateSauce.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateSauce.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateSauce.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateSauce.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateSauce.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnUpdateSauce.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateSauce.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateSauce.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateSauce.Image")));
+            this.btnUpdateSauce.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUpdateSauce.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnUpdateSauce.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnUpdateSauce.Location = new System.Drawing.Point(0, 88);
+            this.btnUpdateSauce.Name = "btnUpdateSauce";
+            this.btnUpdateSauce.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            this.btnUpdateSauce.Size = new System.Drawing.Size(200, 45);
+            this.btnUpdateSauce.TabIndex = 4;
+            this.btnUpdateSauce.Text = "Update Sauce";
+            this.btnUpdateSauce.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUpdateSauce.TextOffset = new System.Drawing.Point(35, 0);
             // 
-            // guna2Button3
+            // btnAddSauce
             // 
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.CustomizableEdges = customizableEdges19;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 44);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            this.guna2Button3.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "Add Sauce";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnAddSauce.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddSauce.CustomizableEdges = customizableEdges19;
+            this.btnAddSauce.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSauce.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSauce.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddSauce.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddSauce.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnAddSauce.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddSauce.ForeColor = System.Drawing.Color.White;
+            this.btnAddSauce.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSauce.Image")));
+            this.btnAddSauce.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddSauce.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnAddSauce.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnAddSauce.Location = new System.Drawing.Point(0, 44);
+            this.btnAddSauce.Name = "btnAddSauce";
+            this.btnAddSauce.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            this.btnAddSauce.Size = new System.Drawing.Size(200, 45);
+            this.btnAddSauce.TabIndex = 3;
+            this.btnAddSauce.Text = "Add Sauce";
+            this.btnAddSauce.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddSauce.TextOffset = new System.Drawing.Point(35, 0);
             // 
             // btnSauce
             // 
@@ -391,9 +395,9 @@
             // 
             // panelRequest
             // 
-            this.panelRequest.Controls.Add(this.guna2Button5);
-            this.panelRequest.Controls.Add(this.guna2Button6);
-            this.panelRequest.Controls.Add(this.guna2Button7);
+            this.panelRequest.Controls.Add(this.btnDeleteRequest);
+            this.panelRequest.Controls.Add(this.btnUpdateRequest);
+            this.panelRequest.Controls.Add(this.btnAddRequest);
             this.panelRequest.Controls.Add(this.btnRequest);
             this.panelRequest.CustomizableEdges = customizableEdges33;
             this.panelRequest.Location = new System.Drawing.Point(0, 150);
@@ -405,77 +409,77 @@
             this.panelRequest.Size = new System.Drawing.Size(200, 45);
             this.panelRequest.TabIndex = 4;
             // 
-            // guna2Button5
+            // btnDeleteRequest
             // 
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.CustomizableEdges = customizableEdges25;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 133);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            this.guna2Button5.Size = new System.Drawing.Size(200, 46);
-            this.guna2Button5.TabIndex = 5;
-            this.guna2Button5.Text = "Delete Request";
-            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnDeleteRequest.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteRequest.CustomizableEdges = customizableEdges25;
+            this.btnDeleteRequest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteRequest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteRequest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteRequest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteRequest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnDeleteRequest.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteRequest.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteRequest.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteRequest.Image")));
+            this.btnDeleteRequest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeleteRequest.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnDeleteRequest.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnDeleteRequest.Location = new System.Drawing.Point(0, 133);
+            this.btnDeleteRequest.Name = "btnDeleteRequest";
+            this.btnDeleteRequest.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            this.btnDeleteRequest.Size = new System.Drawing.Size(200, 46);
+            this.btnDeleteRequest.TabIndex = 5;
+            this.btnDeleteRequest.Text = "Delete Request";
+            this.btnDeleteRequest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeleteRequest.TextOffset = new System.Drawing.Point(35, 0);
             // 
-            // guna2Button6
+            // btnUpdateRequest
             // 
-            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.CustomizableEdges = customizableEdges27;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
-            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 88);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            this.guna2Button6.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button6.TabIndex = 4;
-            this.guna2Button6.Text = "Update Request";
-            this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnUpdateRequest.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateRequest.CustomizableEdges = customizableEdges27;
+            this.btnUpdateRequest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateRequest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateRequest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateRequest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateRequest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnUpdateRequest.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateRequest.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateRequest.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateRequest.Image")));
+            this.btnUpdateRequest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUpdateRequest.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnUpdateRequest.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnUpdateRequest.Location = new System.Drawing.Point(0, 88);
+            this.btnUpdateRequest.Name = "btnUpdateRequest";
+            this.btnUpdateRequest.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            this.btnUpdateRequest.Size = new System.Drawing.Size(200, 45);
+            this.btnUpdateRequest.TabIndex = 4;
+            this.btnUpdateRequest.Text = "Update Request";
+            this.btnUpdateRequest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUpdateRequest.TextOffset = new System.Drawing.Point(35, 0);
             // 
-            // guna2Button7
+            // btnAddRequest
             // 
-            this.guna2Button7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.CustomizableEdges = customizableEdges29;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
-            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button7.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button7.Location = new System.Drawing.Point(0, 44);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            this.guna2Button7.Size = new System.Drawing.Size(200, 45);
-            this.guna2Button7.TabIndex = 3;
-            this.guna2Button7.Text = "Add Request";
-            this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnAddRequest.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddRequest.CustomizableEdges = customizableEdges29;
+            this.btnAddRequest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddRequest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddRequest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddRequest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddRequest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnAddRequest.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddRequest.ForeColor = System.Drawing.Color.White;
+            this.btnAddRequest.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRequest.Image")));
+            this.btnAddRequest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddRequest.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnAddRequest.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnAddRequest.Location = new System.Drawing.Point(0, 44);
+            this.btnAddRequest.Name = "btnAddRequest";
+            this.btnAddRequest.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            this.btnAddRequest.Size = new System.Drawing.Size(200, 45);
+            this.btnAddRequest.TabIndex = 3;
+            this.btnAddRequest.Text = "Add Request";
+            this.btnAddRequest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddRequest.TextOffset = new System.Drawing.Point(35, 0);
             // 
             // btnRequest
             // 
@@ -621,8 +625,10 @@
             // 
             // panelBody
             // 
+            this.panelBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBody.CustomizableEdges = customizableEdges45;
-            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(200, 0);
             this.panelBody.Name = "panelBody";
             this.panelBody.ShadowDecoration.CustomizableEdges = customizableEdges46;
@@ -652,12 +658,39 @@
             this.timerMenu.Interval = 1;
             this.timerMenu.Tick += new System.EventHandler(this.timerMenu_Tick);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.CustomizableEdges = customizableEdges47;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.btnLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(25, 0);
+            this.btnLogout.ImageSize = new System.Drawing.Size(18, 18);
+            this.btnLogout.Location = new System.Drawing.Point(0, 394);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            this.btnLogout.Size = new System.Drawing.Size(200, 56);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Delete Drink";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelBody);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.flowPanelMenu);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
@@ -691,16 +724,17 @@
         private System.Windows.Forms.Timer timerDrinks;
         private System.Windows.Forms.Timer timerSauces;
         private Guna.UI2.WinForms.Guna2Panel panelSauce;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnAddSauce;
         private Guna.UI2.WinForms.Guna2Button btnSauce;
         private Guna.UI2.WinForms.Guna2Panel panelRequest;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteRequest;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateRequest;
+        private Guna.UI2.WinForms.Guna2Button btnAddRequest;
         private Guna.UI2.WinForms.Guna2Button btnRequest;
         private System.Windows.Forms.Timer timerRequests;
         private System.Windows.Forms.Timer timerMenu;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteSauce;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateSauce;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }

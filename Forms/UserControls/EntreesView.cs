@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Diner.Forms.UserControls
+﻿namespace Diner.Forms.UserControls
 {
     public partial class EntreesView : UserControl
     {
-        public EntreesView()
+        private List<EntreeControl> _entreesControls;
+        public EntreesView(List<EntreeControl> entreeControls)
         {
+            _entreesControls = entreeControls;
             InitializeComponent();
+            InitializeEntrees();
+        }
+
+        private void InitializeEntrees()
+        {
+            foreach (var entree in _entreesControls)
+            {
+                flowPanel.Controls.Add(entree);
+            }
         }
     }
 }

@@ -87,3 +87,4 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Forms.AdminForm.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.ReceiptForm.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Forms.UserControls.EntreesView.resources
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Forms.EditForm.resources

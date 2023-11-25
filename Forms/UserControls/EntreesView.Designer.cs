@@ -28,12 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            // 
+            // flowPanel
+            // 
+            this.flowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowPanel.AutoScroll = true;
+            this.flowPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowPanel.Name = "flowPanel";
+            this.flowPanel.Size = new System.Drawing.Size(768, 465);
+            this.flowPanel.TabIndex = 0;
             // 
             // EntreesView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.Controls.Add(this.flowPanel);
             this.Name = "EntreesView";
             this.Size = new System.Drawing.Size(768, 465);
             this.ResumeLayout(false);
@@ -41,5 +53,7 @@
         }
 
         #endregion
+
+        private FlowLayoutPanel flowPanel;
     }
 }

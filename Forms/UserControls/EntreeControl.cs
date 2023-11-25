@@ -5,7 +5,8 @@ namespace Diner
 {
     public partial class EntreeControl : UserControl
     {
-        public event EventHandler<EntreeEventArgs> AddToCartClicked;
+        public event EventHandler<EntreeControlEventArgs> AddToCartClicked;
+        public event EventHandler<EntreeControlEventArgs> EditEntreeClicked;
         public Entree Entree { get; set; }
         public EntreeControl(Entree entree)
         {
@@ -35,8 +36,13 @@ namespace Diner
             InvokeOnClick(this, EventArgs.Empty);
 
             AddToCartClicked?.Invoke(this,
-                new EntreeEventArgs(
+                new EntreeControlEventArgs(
                     this));
+
+
+            EditEntreeClicked?.Invoke(this,
+                new EntreeControlEventArgs
+                    (this));
         }
     }
 }

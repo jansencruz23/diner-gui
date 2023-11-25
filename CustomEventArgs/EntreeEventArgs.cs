@@ -1,12 +1,14 @@
-﻿namespace Diner.CustomEventArgs
+﻿using Diner.Models;
+
+namespace Diner.CustomEventArgs
 {
     public class EntreeEventArgs : EventArgs
     {
-        public EntreeControl EntreeControl { get; set; }
+        public Entree Entree { get; set; }
 
-        public EntreeEventArgs(EntreeControl entreeControl)
+        public EntreeEventArgs(Entree entree)
         {
-            EntreeControl = entreeControl;
+            Entree = entree;
         }
     }
 }

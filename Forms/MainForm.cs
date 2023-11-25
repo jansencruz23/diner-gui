@@ -1,8 +1,8 @@
 ﻿using Diner.CustomEventArgs;
+using Diner.Forms;
 using Diner.Models;
 using Diner.UserControls;
 using Guna.UI2.WinForms;
-using System.Windows.Forms;
 
 namespace Diner
 {
@@ -13,17 +13,29 @@ namespace Diner
         private List<Entree> _drinks;
         private double _total;
         private bool _extraPanelExpand;
+
         public MainForm()
         {
             _entreeControls = new();
+            _entrees = new();
+            InitializeComponent();
+            InitializeEntrees();
+        }
+
+        public MainForm(List<Entree> entree)
+        {
+            _entreeControls = new();
+            _entrees = entree;
             InitializeComponent();
             InitializeEntrees();
         }
 
         private void InitializeEntrees()
         {
-            #region --INITIALIZE ENTREE CONTROLS--
-            var entrees = new List<EntreeControl>
+            if (_entrees.Count <= 0)
+            {
+                #region --INITIALIZE ENTREE CONTROLS--
+                _entreeControls = new List<EntreeControl>
             {
                 new EntreeControl(
                     new Entree
@@ -117,18 +129,25 @@ namespace Diner
                     }),
             };
 
-            #endregion
-
-            _entreeControls.AddRange(entrees);
+                #endregion
+            }
+            else
+            {
+                foreach (var entree in _entrees)
+                {
+                    _entreeControls.Add(new EntreeControl(entree));
+                }
+            }
 
             foreach (var entree in _entreeControls)
             {
                 entree.AddToCartClicked += Entree_AddToCartClicked!;
                 panelItem.Controls.Add(entree);
+                _entrees.Add(entree.Entree);
             }
         }
 
-        private void Entree_AddToCartClicked(object sender, EntreeEventArgs e)
+        private void Entree_AddToCartClicked(object sender, EntreeControlEventArgs e)
         {
             var existingItem = GetExistingCartItem(e.EntreeControl.Entree.Id);
 
@@ -373,6 +392,13 @@ namespace Diner
                 _extraPanelExpand = !_extraPanelExpand;
                 timerPanel.Stop();
             }
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var adminForm = new AdminForm(_entrees);
+            adminForm.ShowDialog();
+            Hide();
         }
     }
 }
