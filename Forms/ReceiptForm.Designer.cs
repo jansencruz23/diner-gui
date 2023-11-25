@@ -1,6 +1,6 @@
 ﻿namespace Diner
 {
-    partial class Receipt
+    partial class ReceiptForm
     {
         /// <summary>
         /// Required designer variable.

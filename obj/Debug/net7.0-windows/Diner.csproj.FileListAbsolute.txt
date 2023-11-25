@@ -7,7 +7,6 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\System.Management.dll
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.csproj.AssemblyReference.cache
-D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Form1.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.csproj.GenerateResource.cache
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.GeneratedMSBuildEditorConfig.editorconfig
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.AssemblyInfoInputs.cache
@@ -39,7 +38,6 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Milk.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Soda.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Tea.jpg
-D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Receipt.resources
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Water.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Microsoft.CodeAnalysis.dll
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
@@ -85,3 +83,6 @@ D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Chopsuey.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\bin\Debug\net7.0-windows\Icons\Pizza.jpg
 D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.SplashScreen.resources
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.MainForm.resources
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.Forms.AdminForm.resources
+D:\User\Jansen\Self Study\2023 - 11 - NOVEMBER\C#\Diner\obj\Debug\net7.0-windows\Diner.ReceiptForm.resources

@@ -2,15 +2,18 @@
 using Diner.Models;
 using Diner.UserControls;
 using Guna.UI2.WinForms;
+using System.Windows.Forms;
 
 namespace Diner
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private List<EntreeControl> _entreeControls;
+        private List<Entree> _entrees;
+        private List<Entree> _drinks;
         private double _total;
         private bool _extraPanelExpand;
-        public Form1()
+        public MainForm()
         {
             _entreeControls = new();
             InitializeComponent();
@@ -303,7 +306,7 @@ namespace Diner
                 entrees.Add(cart.Entree);
             }
 
-            var receiptForm = new Receipt(entrees);
+            var receiptForm = new ReceiptForm(entrees);
             receiptForm.ShowDialog();
             ClearCart();
         }
@@ -361,23 +364,14 @@ namespace Diner
 
         private void timerPanel_Tick(object sender, EventArgs e)
         {
-            if (_extraPanelExpand)
+            var change = _extraPanelExpand ? 10 : -10;
+            panelExtra.Height += change;
+
+            if ((_extraPanelExpand && panelExtra.Height >= panelExtra.MaximumSize.Height)
+                || (!_extraPanelExpand && panelExtra.Height <= panelExtra.MinimumSize.Height))
             {
-                panelExtra.Height += 5;
-                if (panelExtra.Height >= 178)
-                {
-                    _extraPanelExpand = false;
-                    timerPanel.Stop();
-                }
-            }
-            else
-            {
-                panelExtra.Height -= 5;
-                if (panelExtra.Height <= 21)
-                {
-                    _extraPanelExpand = true;
-                    timerPanel.Stop();
-                }
+                _extraPanelExpand = !_extraPanelExpand;
+                timerPanel.Stop();
             }
         }
     }

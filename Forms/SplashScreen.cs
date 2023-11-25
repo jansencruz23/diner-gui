@@ -17,7 +17,7 @@
             {
                 timer1.Stop();
                 Hide();
-                var form = new Form1();
+                var form = new MainForm();
                 form.FormClosed += (s, args) => Close();
                 form.Show();
             }

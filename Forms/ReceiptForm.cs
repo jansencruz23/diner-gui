@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Diner
 {
-    public partial class Receipt : Form
+    public partial class ReceiptForm : Form
     {
         private readonly List<Entree> _entrees;
-        public Receipt(List<Entree> entrees)
+        public ReceiptForm(List<Entree> entrees)
         {
             _entrees = entrees;
             InitializeComponent();
