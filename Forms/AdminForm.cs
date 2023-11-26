@@ -22,7 +22,6 @@ namespace Diner.Forms
             _entreeControls = new();
             InitializeComponent();
             PopulateEntreeControl();
-            panelBody.Controls.Add(new EntreesView(_entreeControls));
         }
 
         private void btnEntree_Click(object sender, EventArgs e)
@@ -35,7 +34,6 @@ namespace Diner.Forms
             CloseTabs(ref _requestExpand, timerRequests);
 
             PopulateEntreeControl();
-            panelBody.Controls.Add(new EntreesView(_entreeControls));
         }
 
         private void PopulateEntreeControl()
@@ -48,6 +46,10 @@ namespace Diner.Forms
                 entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
                 _entreeControls.Add(entreeControl);
             }
+
+            var entreeView = new EntreesView(_entreeControls);
+            entreeView.Dock = DockStyle.Fill;
+            panelBody.Controls.Add(entreeView);
         }
 
         private void EntreeControl_EditEntreeClicked(object? sender, EntreeControlEventArgs e)
@@ -65,6 +67,13 @@ namespace Diner.Forms
             {
                 _entrees.Remove(entree);
                 _entrees.Add(e.Entree);
+            }
+            else
+            {
+                _entrees.Add(e.Entree);
+                var entreeControl = new EntreeControl(e.Entree);
+                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
+                _entreeControls.Add(entreeControl);
             }
 
             PopulateEntreeControl();
@@ -217,6 +226,18 @@ namespace Diner.Forms
             var form = new MainForm(_entrees);
             form.FormClosed += (s, args) => Close();
             form.Show();
+        }
+
+        private void btnAddEntree_Click(object sender, EventArgs e)
+        {
+            var form = new EditForm(new Entree
+            {
+                Id = _entrees.Count + 1
+            });
+
+            form.EntreeEdited += EntreeEdited;
+            form.ShowDialog();
+            PopulateEntreeControl();
         }
     }
 }

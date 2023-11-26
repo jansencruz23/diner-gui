@@ -396,9 +396,10 @@ namespace Diner
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var adminForm = new AdminForm(_entrees);
-            adminForm.ShowDialog();
             Hide();
+            var adminForm = new AdminForm(_entrees);
+            adminForm.FormClosed += (s, args) => Close();
+            adminForm.Show();
         }
     }
 }

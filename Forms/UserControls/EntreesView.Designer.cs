@@ -33,21 +33,24 @@
             // 
             // flowPanel
             // 
-            this.flowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowPanel.AutoScroll = true;
+            this.flowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowPanel.Margin = new System.Windows.Forms.Padding(0);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(768, 465);
+            this.flowPanel.Size = new System.Drawing.Size(874, 530);
             this.flowPanel.TabIndex = 0;
             // 
             // EntreesView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(63)))));
             this.Controls.Add(this.flowPanel);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EntreesView";
-            this.Size = new System.Drawing.Size(768, 465);
+            this.Size = new System.Drawing.Size(874, 530);
             this.ResumeLayout(false);
 
         }

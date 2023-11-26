@@ -26,16 +26,36 @@ namespace Diner.Forms
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtName.Text)
+                    || imgPic.Image == null)
+                {
+                    MessageDialog.Show("Invalid input. Try again");
+                    return;
+                }
+
                 _entree.Price = Convert.ToDouble(txtPrice.Text);
                 _entree.Name = txtName.Text;
+                _entree.Image = imgPic.Image;
 
                 EntreeEdited?.Invoke(this, new EntreeEventArgs(_entree));
-
                 Close();
             }
             catch
             {
                 MessageDialog.Show("Invalid input. Try again");
+            }
+        }
+
+        private void imgPic_Click(object sender, EventArgs e)
+        {
+            using var file = new OpenFileDialog();
+            file.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.ico|All Files|*.*";
+            file.FilterIndex = 1;
+            file.RestoreDirectory = true;
+
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                imgPic.Image = Image.FromFile(file.FileName);
             }
         }
     }

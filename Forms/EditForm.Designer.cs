@@ -55,6 +55,7 @@
             this.imgPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPic.TabIndex = 0;
             this.imgPic.TabStop = false;
+            this.imgPic.Click += new System.EventHandler(this.imgPic_Click);
             // 
             // txtName
             // 
