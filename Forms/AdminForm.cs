@@ -9,7 +9,6 @@ namespace Diner.Forms
     {
         private bool _menuExpand;
         private bool _entreeExpand;
-        private bool _drinksExpand;
         private bool _sauceExpand;
         private bool _requestExpand;
 
@@ -24,252 +23,200 @@ namespace Diner.Forms
             PopulateEntreeControl();
         }
 
-        private void btnEntree_Click(object sender, EventArgs e)
+        private void PopulateControl(Models.Type entreeType, Action<EntreeControl> eventHandler)
         {
-            timerEntrees.Start();
-            CheckMenuExpand();
-            ColorButton(btnEntree);
-            CloseTabs(ref _sauceExpand, timerSauces);
-            CloseTabs(ref _requestExpand, timerRequests);
+            _entreeControls.Clear();
+            panelBody.Controls.Clear();
 
-            PopulateEntreeControl();
+            foreach (var entree in _entrees.Where(e => e.Type == entreeType))
+            {
+                var entreeControl = new EntreeControl(entree);
+                eventHandler?.Invoke(entreeControl);
+                _entreeControls.Add(entreeControl);
+            }
+
+            var entreeView = new EntreesView(_entreeControls);
+            entreeView.Dock = DockStyle.Fill;
+            panelBody.Controls.Add(entreeView);
         }
 
         private void PopulateEntreeControl()
         {
-            _entreeControls.Clear();
-            panelBody.Controls.Clear();
-            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.ENTREE))
-            {
-                var entreeControl = new EntreeControl(entree);
-                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            var entreeView = new EntreesView(_entreeControls);
-            entreeView.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(entreeView);
+            PopulateControl(Models.Type.ENTREE, entreeControl =>
+                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked);
         }
 
         private void PopulateSauceControl()
         {
-            _entreeControls.Clear();
-            panelBody.Controls.Clear();
-            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.SAUCE))
-            {
-                var entreeControl = new EntreeControl(entree);
-                entreeControl.EditSauceClicked += EntreeControl_EditSauceClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            var entreeView = new EntreesView(_entreeControls);
-            entreeView.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(entreeView);
+            PopulateControl(Models.Type.SAUCE, entreeControl =>
+                entreeControl.EditSauceClicked += EntreeControl_EditSauceClicked);
         }
 
         private void PopulateRequestControl()
         {
-            _entreeControls.Clear();
-            panelBody.Controls.Clear();
-            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.REQUEST))
-            {
-                var entreeControl = new EntreeControl(entree);
-                entreeControl.EditRequestClicked += EntreeControl_EditRequestClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            var entreeView = new EntreesView(_entreeControls);
-            entreeView.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(entreeView);
+            PopulateControl(Models.Type.REQUEST, entreeControl =>
+                entreeControl.EditRequestClicked += EntreeControl_EditRequestClicked);
         }
 
         private void PopulateDrinkControl()
         {
-            _entreeControls.Clear();
-            panelBody.Controls.Clear();
-            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.DRINK))
-            {
-                var entreeControl = new EntreeControl(entree);
-                entreeControl.EditDrinkClicked += EntreeControl_EditDrinkClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            var entreeView = new EntreesView(_entreeControls);
-            entreeView.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(entreeView);
+            PopulateControl(Models.Type.DRINK, entreeControl =>
+                entreeControl.EditDrinkClicked += EntreeControl_EditDrinkClicked);
         }
 
-        private void EntreeControl_EditEntreeClicked(object? sender, EntreeControlEventArgs e)
+        private void RemoveEntree(Models.Type entreeType, string name)
         {
-            var editForm = new EditForm(e.EntreeControl.Entree);
-            editForm.EntreeEdited += EntreeEdited;
-            editForm.EntreeDeleted += EntreeDeleted;
-            editForm.ShowDialog();
+            var entree = _entrees.FirstOrDefault(e => e.Type == entreeType
+                && e.Name.Equals(name));
+
+            if (entree != null)
+            {
+                _entrees.Remove(entree);
+
+                switch (entreeType)
+                {
+                    case Models.Type.ENTREE:
+                        PopulateEntreeControl();
+                        break;
+                    case Models.Type.SAUCE:
+                        PopulateSauceControl();
+                        break;
+                    case Models.Type.REQUEST:
+                        PopulateRequestControl();
+                        break;
+                }
+            }
+        }
+
+        private void RemoveEntree(Models.Type entreeType, int id)
+        {
+            var entree = _entrees.FirstOrDefault(e => e.Type == entreeType 
+                && e.Id == id);
+
+            if (entree != null)
+            {
+                _entrees.Remove(entree);
+                PopulateEntreeControl();
+            }
         }
 
         private void EntreeDeleted(object? sender, EntreeEventArgs e)
         {
-            var entree = _entrees.Where(e => e.Type == Models.Type.ENTREE)
-                .FirstOrDefault(e => e.Id == e.Id);
-            _entrees.Remove(entree);
-            PopulateEntreeControl();
+            RemoveEntree(Models.Type.ENTREE, e.Entree.Id);
         }
 
         private void SauceDeleted(object? sender, EntreeEventArgs e)
         {
-            var entree = _entrees.Where(e => e.Type == Models.Type.SAUCE)
-                .FirstOrDefault(e => e.Name == e.Name);
-            _entrees.Remove(entree);
-            PopulateEntreeControl();
+            RemoveEntree(Models.Type.SAUCE, e.Entree.Name);
         }
 
         private void RequestDeleted(object? sender, EntreeEventArgs e)
         {
-            var entree = _entrees.Where(e => e.Type == Models.Type.REQUEST)
-                .FirstOrDefault(e => e.Name == e.Name);
-            _entrees.Remove(entree);
-            PopulateEntreeControl();
+            RemoveEntree(Models.Type.REQUEST, e.Entree.Name);
         }
 
-        private void EntreeControl_EditSauceClicked(object? sender, EntreeControlEventArgs e)
+        private void EntreeControl_EditClicked(object? sender, EntreeControlEventArgs e, 
+            EventHandler<EntreeEventArgs> editedHandler,
+            EventHandler<EntreeEventArgs> deletedHandler = null)
         {
             var editForm = new EditForm(e.EntreeControl.Entree);
-            editForm.EntreeEdited += SauceEdited;
-            editForm.EntreeDeleted += SauceDeleted;
+            editForm.EntreeEdited += editedHandler;
+
+            if (deletedHandler != null)
+            {
+                editForm.EntreeDeleted += (s, args) => deletedHandler(s, args);
+            }
+
             editForm.ShowDialog();
         }
 
-        private void EntreeControl_EditRequestClicked(object? sender, EntreeControlEventArgs e)
+        private void EntreeControl_EditEntreeClicked(object? sender, EntreeControlEventArgs e) =>
+            EntreeControl_EditClicked(sender, e, 
+                EntreeEdited, EntreeDeleted);
+
+        private void EntreeControl_EditSauceClicked(object? sender, EntreeControlEventArgs e) =>
+            EntreeControl_EditClicked(sender, e, 
+                SauceEdited, SauceDeleted);
+
+        private void EntreeControl_EditRequestClicked(object? sender, EntreeControlEventArgs e) =>
+            EntreeControl_EditClicked(sender, e, 
+                RequestEdited, RequestDeleted);
+
+        private void EntreeControl_EditDrinkClicked(object? sender, EntreeControlEventArgs e) =>
+            EntreeControl_EditClicked(sender, e, 
+                DrinksEdited);
+
+        private void HandleEntreeEdited(Models.Type entreeType, Func<Entree, bool> criteria, 
+            Action<EntreeControl> clickHandler, Action populateControl, EntreeEventArgs e)
         {
-            var editForm = new EditForm(e.EntreeControl.Entree);
-            editForm.EntreeEdited += RequestEdited;
-            editForm.EntreeDeleted += RequestDeleted;
-            editForm.ShowDialog();
+            var existingEntree = _entrees
+                .FirstOrDefault(i => i.Type == entreeType && criteria(i));
+
+            if (existingEntree != null)
+            {
+                _entrees.Remove(existingEntree);
+            }
+
+            _entrees.Add(e.Entree);
+
+            var entreeControl = new EntreeControl(e.Entree);
+            clickHandler(entreeControl);
+            _entreeControls.Add(entreeControl);
+
+            populateControl();
         }
 
-        private void EntreeControl_EditDrinkClicked(object? sender, EntreeControlEventArgs e)
+        private void EntreeEdited(object? sender, EntreeEventArgs e) =>
+            HandleEntreeEdited(Models.Type.ENTREE, i => i.Id == e.Entree.Id, 
+                ec => ec.EditEntreeClicked += EntreeControl_EditEntreeClicked, PopulateEntreeControl, e);
+
+        private void SauceEdited(object? sender, EntreeEventArgs e) =>
+            HandleEntreeEdited(Models.Type.SAUCE, i => i.Name.Equals(e.Entree.Name), 
+                ec => ec.EditEntreeClicked += EntreeControl_EditSauceClicked, PopulateSauceControl, e);
+
+        private void RequestEdited(object? sender, EntreeEventArgs e) =>
+            HandleEntreeEdited(Models.Type.REQUEST, i => i.Name.Equals(e.Entree.Name),
+                ec => ec.EditRequestClicked += EntreeControl_EditRequestClicked, PopulateRequestControl, e);
+
+        private void DrinksEdited(object? sender, EntreeEventArgs e) =>
+            HandleEntreeEdited(Models.Type.DRINK, i => i.Name.Equals(e.Entree.Name), 
+                ec => ec.EditDrinkClicked += EntreeControl_EditDrinkClicked, PopulateDrinkControl, e);
+
+        private void MenuButtonClicked(Guna2Button button, System.Windows.Forms.Timer timer, 
+            Action controlPopulation)
         {
-            var editForm = new EditForm(e.EntreeControl.Entree);
-            editForm.EntreeEdited += DrinksEdited;
-            editForm.ShowDialog();
+            CheckMenuExpand();
+            ColorButton(button);
+            CloseTabs(ref _entreeExpand, timerEntrees);
+            CloseTabs(ref _sauceExpand, timerSauces);
+            CloseTabs(ref _requestExpand, timerRequests);
+
+            if (timer != null)
+            {
+                timer.Start();
+            }
+
+            controlPopulation();
         }
 
-        private void EntreeEdited(object? sender, EntreeEventArgs e)
+        private void btnEntree_Click(object sender, EventArgs e)
         {
-            var entree = _entrees
-                .Where(i => i.Type == Models.Type.ENTREE)
-                .FirstOrDefault(i => e.Entree.Id == i.Id);
-            
-            if (entree != null)
-            {
-                _entrees.Remove(entree);
-                _entrees.Add(e.Entree);
-            }
-            else
-            {
-                _entrees.Add(e.Entree);
-                var entreeControl = new EntreeControl(e.Entree);
-                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            PopulateEntreeControl();
-        }
-
-        private void SauceEdited(object? sender, EntreeEventArgs e)
-        {
-            var sauce = _entrees
-                .Where(i => i.Type == Models.Type.SAUCE)
-                .FirstOrDefault(i => e.Entree.Name.Equals(i.Name));
-
-            if (sauce != null)
-            {
-                _entrees.Remove(sauce);
-                _entrees.Add(e.Entree);
-            }
-            else
-            {
-                _entrees.Add(e.Entree);
-                var entreeControl = new EntreeControl(e.Entree);
-                entreeControl.EditEntreeClicked += EntreeControl_EditSauceClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            PopulateSauceControl();
-        }
-
-        private void RequestEdited(object? sender, EntreeEventArgs e)
-        {
-            var request = _entrees
-                .Where(i => i.Type == Models.Type.REQUEST)
-                .FirstOrDefault(i => e.Entree.Name.Equals(i.Name));
-
-            if (request != null)
-            {
-                _entrees.Remove(request);
-                _entrees.Add(e.Entree);
-            }
-            else
-            {
-                _entrees.Add(e.Entree);
-                var entreeControl = new EntreeControl(e.Entree);
-                entreeControl.EditRequestClicked += EntreeControl_EditRequestClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            PopulateRequestControl();
-        }
-
-        private void DrinksEdited(object? sender, EntreeEventArgs e)
-        {
-            var drink = _entrees
-                .Where(i => i.Type == Models.Type.DRINK)
-                .FirstOrDefault(i => e.Entree.Name.Equals(i.Name));
-
-            if (drink != null)
-            {
-                _entrees.Remove(drink);
-                _entrees.Add(e.Entree);
-            }
-            else
-            {
-                _entrees.Add(e.Entree);
-                var entreeControl = new EntreeControl(e.Entree);
-                entreeControl.EditDrinkClicked += EntreeControl_EditDrinkClicked;
-                _entreeControls.Add(entreeControl);
-            }
-
-            PopulateDrinkControl();
+            MenuButtonClicked(btnEntree, timerEntrees, PopulateEntreeControl);
         }
 
         private void btnDrinks_Click(object sender, EventArgs e)
         {
-            CheckMenuExpand();
-            ColorButton(btnDrinks);
-            CloseTabs(ref _entreeExpand, timerEntrees);
-            CloseTabs(ref _sauceExpand, timerSauces);
-            CloseTabs(ref _requestExpand, timerRequests);
-            PopulateDrinkControl();
+            MenuButtonClicked(btnDrinks, null, PopulateDrinkControl);
         }
 
         private void btnSauce_Click(object sender, EventArgs e)
         {
-            timerSauces.Start();
-            CheckMenuExpand();
-            ColorButton(btnSauce);
-            CloseTabs(ref _entreeExpand, timerEntrees);
-            CloseTabs(ref _requestExpand, timerRequests);
-            PopulateSauceControl();
+            MenuButtonClicked(btnSauce, timerSauces, PopulateSauceControl);
         }
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            timerRequests.Start();
-            CheckMenuExpand();
-            ColorButton(btnRequest);
-            CloseTabs(ref _entreeExpand, timerEntrees);
-            CloseTabs(ref _sauceExpand, timerSauces);
-            PopulateRequestControl();
+            MenuButtonClicked(btnRequest, timerRequests, PopulateRequestControl);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -368,7 +315,7 @@ namespace Diner.Forms
                 Id = _entrees.Count + 1,
                 Quantity  = 1,
                 Type = Models.Type.ENTREE
-            });
+            }, true);
 
             form.EntreeEdited += EntreeEdited;
             form.ShowDialog();
@@ -381,7 +328,7 @@ namespace Diner.Forms
             {
                 Quantity = 1,
                 Type = Models.Type.SAUCE
-            });
+            }, true);
 
             form.EntreeEdited += SauceEdited;
             form.ShowDialog();
@@ -395,7 +342,7 @@ namespace Diner.Forms
                 Id = 99,
                 Quantity = 1,
                 Type = Models.Type.REQUEST
-            });
+            }, true);
 
             form.EntreeEdited += RequestEdited;
             form.ShowDialog();

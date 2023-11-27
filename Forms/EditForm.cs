@@ -9,13 +9,16 @@ namespace Diner.Forms
         public EventHandler<EntreeEventArgs> EntreeEdited;
         public EventHandler<EntreeEventArgs> EntreeDeleted;
         private Entree _entree;
-        public EditForm(Entree entree)
+
+        public EditForm(Entree entree,
+            bool newEntree = false)
         {
             _entree = entree;
             InitializeComponent();
             InitializeEntree();
 
-            if (entree.Type == Models.Type.DRINK)
+            if (entree.Type == Models.Type.DRINK
+                || newEntree)
             {
                 btnDelete.Enabled = false;
             }

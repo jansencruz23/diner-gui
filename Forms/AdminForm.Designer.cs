@@ -408,7 +408,7 @@
             this.panelBody.Location = new System.Drawing.Point(200, 0);
             this.panelBody.MaximumSize = new System.Drawing.Size(4000, 4000);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Padding = new System.Windows.Forms.Padding(0, 50, 0, 10);
+            this.panelBody.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panelBody.ShadowDecoration.CustomizableEdges = customizableEdges30;
             this.panelBody.Size = new System.Drawing.Size(600, 616);
             this.panelBody.TabIndex = 1;
