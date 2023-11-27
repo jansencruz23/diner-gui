@@ -435,9 +435,10 @@
             this.ClientSize = new System.Drawing.Size(1198, 626);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.flowPanelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminForm";
+            this.Text = "Paprika Palace - Admin";
             this.flowPanelMenu.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelEntree.ResumeLayout(false);
