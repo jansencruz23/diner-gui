@@ -9,6 +9,7 @@ namespace Diner
         public event EventHandler<EntreeControlEventArgs> EditEntreeClicked;
         public event EventHandler<EntreeControlEventArgs> EditSauceClicked;
         public event EventHandler<EntreeControlEventArgs> EditRequestClicked;
+        public event EventHandler<EntreeControlEventArgs> EditDrinkClicked;
         public Entree Entree { get; set; }
         public EntreeControl(Entree entree)
         {
@@ -52,6 +53,10 @@ namespace Diner
                     break;
                 case Models.Type.REQUEST:
                     EditRequestClicked?.Invoke(this,
+                       new EntreeControlEventArgs(this));
+                    break;
+                case Models.Type.DRINK:
+                    EditDrinkClicked?.Invoke(this,
                        new EntreeControlEventArgs(this));
                     break;
             }

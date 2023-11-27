@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.imgPic = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,11 +49,11 @@
             // imgPic
             // 
             this.imgPic.BorderRadius = 10;
-            this.imgPic.CustomizableEdges = customizableEdges11;
+            this.imgPic.CustomizableEdges = customizableEdges1;
             this.imgPic.ImageRotate = 0F;
             this.imgPic.Location = new System.Drawing.Point(26, 26);
             this.imgPic.Name = "imgPic";
-            this.imgPic.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.imgPic.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.imgPic.Size = new System.Drawing.Size(110, 110);
             this.imgPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPic.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.BorderRadius = 5;
             this.txtName.BorderThickness = 0;
-            this.txtName.CustomizableEdges = customizableEdges13;
+            this.txtName.CustomizableEdges = customizableEdges3;
             this.txtName.DefaultText = "";
             this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -80,7 +80,7 @@
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            this.txtName.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.txtName.Size = new System.Drawing.Size(162, 37);
             this.txtName.TabIndex = 1;
             // 
@@ -89,7 +89,7 @@
             this.txtPrice.BackColor = System.Drawing.Color.Transparent;
             this.txtPrice.BorderRadius = 5;
             this.txtPrice.BorderThickness = 0;
-            this.txtPrice.CustomizableEdges = customizableEdges15;
+            this.txtPrice.CustomizableEdges = customizableEdges5;
             this.txtPrice.DefaultText = "";
             this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -104,14 +104,14 @@
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            this.txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.txtPrice.Size = new System.Drawing.Size(162, 37);
             this.txtPrice.TabIndex = 2;
             // 
             // btnSave
             // 
             this.btnSave.BorderRadius = 5;
-            this.btnSave.CustomizableEdges = customizableEdges17;
+            this.btnSave.CustomizableEdges = customizableEdges7;
             this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -121,7 +121,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(26, 161);
             this.btnSave.Name = "btnSave";
-            this.btnSave.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            this.btnSave.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.btnSave.Size = new System.Drawing.Size(303, 45);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
@@ -133,7 +133,7 @@
             this.btnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(63)))));
             this.btnDelete.BorderRadius = 5;
             this.btnDelete.BorderThickness = 1;
-            this.btnDelete.CustomizableEdges = customizableEdges19;
+            this.btnDelete.CustomizableEdges = customizableEdges9;
             this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -143,10 +143,11 @@
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(63)))));
             this.btnDelete.Location = new System.Drawing.Point(26, 217);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            this.btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.btnDelete.Size = new System.Drawing.Size(303, 45);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // EditForm
             // 

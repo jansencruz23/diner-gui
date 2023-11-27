@@ -79,12 +79,13 @@
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.tableDrink = new System.Windows.Forms.TableLayoutPanel();
+            this.rbMilk = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbCoffee = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbJuice = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbSoda = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbTea = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbLemonade = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbSoda = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbJuice = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbMilk = new Guna.UI2.WinForms.Guna2RadioButton();
             this.tabEntree = new System.Windows.Forms.TabPage();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelItem = new System.Windows.Forms.FlowLayoutPanel();
@@ -107,6 +108,7 @@
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.groupBox.SuspendLayout();
+            this.tableDrink.SuspendLayout();
             this.tabEntree.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.panelExtra.SuspendLayout();
@@ -423,12 +425,7 @@
             this.groupBox.BackColor = System.Drawing.Color.Transparent;
             this.groupBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.groupBox.BorderRadius = 15;
-            this.groupBox.Controls.Add(this.rbCoffee);
-            this.groupBox.Controls.Add(this.rbTea);
-            this.groupBox.Controls.Add(this.rbLemonade);
-            this.groupBox.Controls.Add(this.rbSoda);
-            this.groupBox.Controls.Add(this.rbJuice);
-            this.groupBox.Controls.Add(this.rbMilk);
+            this.groupBox.Controls.Add(this.tableDrink);
             this.groupBox.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.groupBox.CustomizableEdges = customizableEdges13;
             this.groupBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
@@ -442,6 +439,48 @@
             this.groupBox.Text = "Drinks (choose one)";
             this.groupBox.TextOffset = new System.Drawing.Point(10, 10);
             // 
+            // tableDrink
+            // 
+            this.tableDrink.ColumnCount = 3;
+            this.tableDrink.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableDrink.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableDrink.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableDrink.Controls.Add(this.rbMilk, 0, 0);
+            this.tableDrink.Controls.Add(this.rbCoffee, 2, 1);
+            this.tableDrink.Controls.Add(this.rbJuice, 0, 1);
+            this.tableDrink.Controls.Add(this.rbSoda, 2, 0);
+            this.tableDrink.Controls.Add(this.rbTea, 1, 1);
+            this.tableDrink.Controls.Add(this.rbLemonade, 1, 0);
+            this.tableDrink.Location = new System.Drawing.Point(45, 65);
+            this.tableDrink.Name = "tableDrink";
+            this.tableDrink.RowCount = 2;
+            this.tableDrink.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableDrink.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableDrink.Size = new System.Drawing.Size(528, 100);
+            this.tableDrink.TabIndex = 6;
+            // 
+            // rbMilk
+            // 
+            this.rbMilk.AutoSize = true;
+            this.rbMilk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.rbMilk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbMilk.CheckedState.BorderThickness = 0;
+            this.rbMilk.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbMilk.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbMilk.CheckedState.InnerOffset = -4;
+            this.rbMilk.Location = new System.Drawing.Point(3, 3);
+            this.rbMilk.Name = "rbMilk";
+            this.rbMilk.Size = new System.Drawing.Size(56, 22);
+            this.rbMilk.TabIndex = 0;
+            this.rbMilk.Text = "Milk";
+            this.toolTip.SetToolTip(this.rbMilk, "Price: ₱ 15");
+            this.rbMilk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbMilk.UncheckedState.BorderThickness = 2;
+            this.rbMilk.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbMilk.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbMilk.UseVisualStyleBackColor = false;
+            this.rbMilk.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
             // rbCoffee
             // 
             this.rbCoffee.AutoSize = true;
@@ -451,7 +490,7 @@
             this.rbCoffee.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbCoffee.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbCoffee.CheckedState.InnerOffset = -4;
-            this.rbCoffee.Location = new System.Drawing.Point(458, 115);
+            this.rbCoffee.Location = new System.Drawing.Point(379, 53);
             this.rbCoffee.Name = "rbCoffee";
             this.rbCoffee.Size = new System.Drawing.Size(78, 22);
             this.rbCoffee.TabIndex = 5;
@@ -464,6 +503,50 @@
             this.rbCoffee.UseVisualStyleBackColor = false;
             this.rbCoffee.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
+            // rbJuice
+            // 
+            this.rbJuice.AutoSize = true;
+            this.rbJuice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.rbJuice.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbJuice.CheckedState.BorderThickness = 0;
+            this.rbJuice.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbJuice.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbJuice.CheckedState.InnerOffset = -4;
+            this.rbJuice.Location = new System.Drawing.Point(3, 53);
+            this.rbJuice.Name = "rbJuice";
+            this.rbJuice.Size = new System.Drawing.Size(69, 22);
+            this.rbJuice.TabIndex = 1;
+            this.rbJuice.Text = "Juice";
+            this.toolTip.SetToolTip(this.rbJuice, "Price: ₱ 15");
+            this.rbJuice.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbJuice.UncheckedState.BorderThickness = 2;
+            this.rbJuice.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbJuice.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbJuice.UseVisualStyleBackColor = false;
+            this.rbJuice.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // rbSoda
+            // 
+            this.rbSoda.AutoSize = true;
+            this.rbSoda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.rbSoda.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbSoda.CheckedState.BorderThickness = 0;
+            this.rbSoda.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbSoda.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbSoda.CheckedState.InnerOffset = -4;
+            this.rbSoda.Location = new System.Drawing.Point(379, 3);
+            this.rbSoda.Name = "rbSoda";
+            this.rbSoda.Size = new System.Drawing.Size(67, 22);
+            this.rbSoda.TabIndex = 2;
+            this.rbSoda.Text = "Soda";
+            this.toolTip.SetToolTip(this.rbSoda, "Price: ₱ 25");
+            this.rbSoda.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbSoda.UncheckedState.BorderThickness = 2;
+            this.rbSoda.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbSoda.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbSoda.UseVisualStyleBackColor = false;
+            this.rbSoda.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
             // rbTea
             // 
             this.rbTea.AutoSize = true;
@@ -473,7 +556,7 @@
             this.rbTea.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbTea.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbTea.CheckedState.InnerOffset = -4;
-            this.rbTea.Location = new System.Drawing.Point(237, 115);
+            this.rbTea.Location = new System.Drawing.Point(191, 53);
             this.rbTea.Name = "rbTea";
             this.rbTea.Size = new System.Drawing.Size(56, 22);
             this.rbTea.TabIndex = 4;
@@ -495,7 +578,7 @@
             this.rbLemonade.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbLemonade.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbLemonade.CheckedState.InnerOffset = -4;
-            this.rbLemonade.Location = new System.Drawing.Point(237, 75);
+            this.rbLemonade.Location = new System.Drawing.Point(191, 3);
             this.rbLemonade.Name = "rbLemonade";
             this.rbLemonade.Size = new System.Drawing.Size(110, 22);
             this.rbLemonade.TabIndex = 3;
@@ -507,72 +590,6 @@
             this.rbLemonade.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbLemonade.UseVisualStyleBackColor = false;
             this.rbLemonade.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
-            // 
-            // rbSoda
-            // 
-            this.rbSoda.AutoSize = true;
-            this.rbSoda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.rbSoda.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbSoda.CheckedState.BorderThickness = 0;
-            this.rbSoda.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbSoda.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbSoda.CheckedState.InnerOffset = -4;
-            this.rbSoda.Location = new System.Drawing.Point(458, 75);
-            this.rbSoda.Name = "rbSoda";
-            this.rbSoda.Size = new System.Drawing.Size(67, 22);
-            this.rbSoda.TabIndex = 2;
-            this.rbSoda.Text = "Soda";
-            this.toolTip.SetToolTip(this.rbSoda, "Price: ₱ 25");
-            this.rbSoda.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbSoda.UncheckedState.BorderThickness = 2;
-            this.rbSoda.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbSoda.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rbSoda.UseVisualStyleBackColor = false;
-            this.rbSoda.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
-            // 
-            // rbJuice
-            // 
-            this.rbJuice.AutoSize = true;
-            this.rbJuice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.rbJuice.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbJuice.CheckedState.BorderThickness = 0;
-            this.rbJuice.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbJuice.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbJuice.CheckedState.InnerOffset = -4;
-            this.rbJuice.Location = new System.Drawing.Point(45, 115);
-            this.rbJuice.Name = "rbJuice";
-            this.rbJuice.Size = new System.Drawing.Size(69, 22);
-            this.rbJuice.TabIndex = 1;
-            this.rbJuice.Text = "Juice";
-            this.toolTip.SetToolTip(this.rbJuice, "Price: ₱ 15");
-            this.rbJuice.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbJuice.UncheckedState.BorderThickness = 2;
-            this.rbJuice.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbJuice.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rbJuice.UseVisualStyleBackColor = false;
-            this.rbJuice.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
-            // 
-            // rbMilk
-            // 
-            this.rbMilk.AutoSize = true;
-            this.rbMilk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
-            this.rbMilk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbMilk.CheckedState.BorderThickness = 0;
-            this.rbMilk.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbMilk.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbMilk.CheckedState.InnerOffset = -4;
-            this.rbMilk.Location = new System.Drawing.Point(45, 75);
-            this.rbMilk.Name = "rbMilk";
-            this.rbMilk.Size = new System.Drawing.Size(56, 22);
-            this.rbMilk.TabIndex = 0;
-            this.rbMilk.Text = "Milk";
-            this.toolTip.SetToolTip(this.rbMilk, "Price: ₱ 15");
-            this.rbMilk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbMilk.UncheckedState.BorderThickness = 2;
-            this.rbMilk.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbMilk.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rbMilk.UseVisualStyleBackColor = false;
-            this.rbMilk.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // tabEntree
             // 
@@ -822,7 +839,8 @@
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
             this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
+            this.tableDrink.ResumeLayout(false);
+            this.tableDrink.PerformLayout();
             this.tabEntree.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.panelExtra.ResumeLayout(false);
@@ -883,5 +901,6 @@
         private Guna.UI2.WinForms.Guna2DragControl dragControl;
         private ToolStripMenuItem adminToolStripMenuItem;
         private ToolStripMenuItem loginToolStripMenuItem;
+        private TableLayoutPanel tableDrink;
     }
 }

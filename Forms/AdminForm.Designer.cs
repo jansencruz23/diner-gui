@@ -52,16 +52,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.flowPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
@@ -75,12 +73,10 @@
             this.btnAddRequest = new Guna.UI2.WinForms.Guna2Button();
             this.btnRequest = new Guna.UI2.WinForms.Guna2Button();
             this.panelDrinks = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddDrink = new Guna.UI2.WinForms.Guna2Button();
             this.btnDrinks = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.timerEntrees = new System.Windows.Forms.Timer(this.components);
             this.panelBody = new Guna.UI2.WinForms.Guna2Panel();
-            this.timerDrinks = new System.Windows.Forms.Timer(this.components);
             this.timerSauces = new System.Windows.Forms.Timer(this.components);
             this.timerRequests = new System.Windows.Forms.Timer(this.components);
             this.timerMenu = new System.Windows.Forms.Timer(this.components);
@@ -336,46 +332,21 @@
             // 
             // panelDrinks
             // 
-            this.panelDrinks.Controls.Add(this.btnAddDrink);
             this.panelDrinks.Controls.Add(this.btnDrinks);
-            this.panelDrinks.CustomizableEdges = customizableEdges27;
+            this.panelDrinks.CustomizableEdges = customizableEdges25;
             this.panelDrinks.Location = new System.Drawing.Point(0, 330);
             this.panelDrinks.Margin = new System.Windows.Forms.Padding(0);
             this.panelDrinks.MaximumSize = new System.Drawing.Size(200, 90);
             this.panelDrinks.MinimumSize = new System.Drawing.Size(200, 45);
             this.panelDrinks.Name = "panelDrinks";
-            this.panelDrinks.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            this.panelDrinks.Size = new System.Drawing.Size(200, 90);
+            this.panelDrinks.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            this.panelDrinks.Size = new System.Drawing.Size(200, 45);
             this.panelDrinks.TabIndex = 2;
-            // 
-            // btnAddDrink
-            // 
-            this.btnAddDrink.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddDrink.CustomizableEdges = customizableEdges23;
-            this.btnAddDrink.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddDrink.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddDrink.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddDrink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddDrink.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.btnAddDrink.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddDrink.ForeColor = System.Drawing.Color.White;
-            this.btnAddDrink.Image = ((System.Drawing.Image)(resources.GetObject("btnAddDrink.Image")));
-            this.btnAddDrink.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddDrink.ImageOffset = new System.Drawing.Point(25, 0);
-            this.btnAddDrink.ImageSize = new System.Drawing.Size(18, 18);
-            this.btnAddDrink.Location = new System.Drawing.Point(0, 44);
-            this.btnAddDrink.Name = "btnAddDrink";
-            this.btnAddDrink.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            this.btnAddDrink.Size = new System.Drawing.Size(200, 45);
-            this.btnAddDrink.TabIndex = 3;
-            this.btnAddDrink.Text = "Add Drink";
-            this.btnAddDrink.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddDrink.TextOffset = new System.Drawing.Point(35, 0);
             // 
             // btnDrinks
             // 
             this.btnDrinks.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrinks.CustomizableEdges = customizableEdges25;
+            this.btnDrinks.CustomizableEdges = customizableEdges23;
             this.btnDrinks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDrinks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDrinks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -388,7 +359,7 @@
             this.btnDrinks.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnDrinks.Location = new System.Drawing.Point(0, 0);
             this.btnDrinks.Name = "btnDrinks";
-            this.btnDrinks.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            this.btnDrinks.ShadowDecoration.CustomizableEdges = customizableEdges24;
             this.btnDrinks.Size = new System.Drawing.Size(200, 44);
             this.btnDrinks.TabIndex = 2;
             this.btnDrinks.Text = "Drinks";
@@ -399,7 +370,7 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.CustomizableEdges = customizableEdges29;
+            this.btnLogout.CustomizableEdges = customizableEdges27;
             this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -412,9 +383,9 @@
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(25, 0);
             this.btnLogout.ImageSize = new System.Drawing.Size(18, 18);
-            this.btnLogout.Location = new System.Drawing.Point(3, 423);
+            this.btnLogout.Location = new System.Drawing.Point(3, 378);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            this.btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges28;
             this.btnLogout.Size = new System.Drawing.Size(200, 56);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Delete Drink";
@@ -432,21 +403,15 @@
             // 
             this.panelBody.AutoSize = true;
             this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.panelBody.CustomizableEdges = customizableEdges31;
+            this.panelBody.CustomizableEdges = customizableEdges29;
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBody.Location = new System.Drawing.Point(200, 0);
             this.panelBody.MaximumSize = new System.Drawing.Size(4000, 4000);
             this.panelBody.Name = "panelBody";
             this.panelBody.Padding = new System.Windows.Forms.Padding(0, 50, 0, 10);
-            this.panelBody.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            this.panelBody.ShadowDecoration.CustomizableEdges = customizableEdges30;
             this.panelBody.Size = new System.Drawing.Size(600, 616);
             this.panelBody.TabIndex = 1;
-            // 
-            // timerDrinks
-            // 
-            this.timerDrinks.Enabled = true;
-            this.timerDrinks.Interval = 1;
-            this.timerDrinks.Tick += new System.EventHandler(this.timerDrinks_Tick);
             // 
             // timerSauces
             // 
@@ -496,9 +461,7 @@
         private System.Windows.Forms.Timer timerEntrees;
         private Guna.UI2.WinForms.Guna2Panel panelBody;
         private Guna.UI2.WinForms.Guna2Panel panelDrinks;
-        private Guna.UI2.WinForms.Guna2Button btnAddDrink;
         private Guna.UI2.WinForms.Guna2Button btnDrinks;
-        private System.Windows.Forms.Timer timerDrinks;
         private System.Windows.Forms.Timer timerSauces;
         private Guna.UI2.WinForms.Guna2Panel panelSauce;
         private Guna.UI2.WinForms.Guna2Button btnAddSauce;

@@ -21,6 +21,7 @@ namespace Diner
             InitializeEntrees();
             InitializeSauce();
             InitializeRequest();
+            InitializeDrinks();
         }
 
         public MainForm(List<Entree> entree)
@@ -31,6 +32,7 @@ namespace Diner
             InitializeEntrees();
             InitializeSauce(true);
             InitializeRequest(true);
+            InitializeDrinks(true);
         }
 
         private void InitializeEntrees()
@@ -214,6 +216,44 @@ namespace Diner
             }
         }
 
+        private void InitializeDrinks(bool fromAdmin = false)
+        {
+            if (!fromAdmin)
+            {
+                foreach (var pair in drinkDetails.Where(pair => pair.Value != default))
+                {
+                    var itemName = pair.Key;
+                    var drinkInfo = pair.Value;
+                    var itemImage = Image.FromFile($"./Icons/{drinkInfo.imageName}");
+
+                    _entrees.Add(new Entree
+                    {
+                        Id = 98,
+                        Name = itemName,
+                        Image = itemImage,
+                        Price = drinkInfo.price,
+                        Quantity = 1,
+                        Type = Models.Type.DRINK
+                    });
+                }
+                return;
+            }
+
+            tableDrink.Controls.Clear();
+            foreach (var request in _entrees.Where(e => e.Type == Models.Type.DRINK))
+            {
+                var radioButton = new Guna2RadioButton
+                {
+                    Text = request.Name,
+                    AutoSize = true,
+                    BackColor = Color.FromArgb(32, 32, 42)
+                };
+                toolTip.SetToolTip(radioButton, $"Price: ₱ {request.Price}");
+                radioButton.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
+                tableDrink.Controls.Add(radioButton);
+            }
+        }
+
         private void Entree_AddToCartClicked(object sender, EntreeControlEventArgs e)
         {
             var existingItem = GetExistingCartItem(e.EntreeControl.Entree.Id);
@@ -336,18 +376,10 @@ namespace Diner
         {
             var itemName = (sender as Guna2RadioButton).Text;
 
-            if (drinkDetails.TryGetValue(itemName, out var drinkInfo))
-            {
-                var itemImage = Image.FromFile($"./Icons/{drinkInfo.imageName}");
-                AddOrRemoveSingleItem(new Entree
-                {
-                    Id = 98,
-                    Name = itemName,
-                    Image = itemImage,
-                    Price = drinkInfo.price,
-                    Quantity = 1
-                });
-            }
+            var drink = _entrees
+                .Where(d => d.Type == Models.Type.DRINK)
+                .FirstOrDefault(d => d.Name.Equals(itemName));
+            AddOrRemoveSingleItem(drink);
         }
 
         private void AddOrRemoveSingleItem(Entree entree)
@@ -408,7 +440,7 @@ namespace Diner
         private void btnPay_Click(object sender, EventArgs e)
         {
             var entrees = new List<Entree>();
-            foreach(var cart in panelCart.Controls.OfType<CartItem>())
+            foreach (var cart in panelCart.Controls.OfType<CartItem>())
             {
                 entrees.Add(cart.Entree);
             }

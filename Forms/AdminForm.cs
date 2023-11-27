@@ -29,7 +29,6 @@ namespace Diner.Forms
             timerEntrees.Start();
             CheckMenuExpand();
             ColorButton(btnEntree);
-            CloseTabs(ref _drinksExpand, timerDrinks);
             CloseTabs(ref _sauceExpand, timerSauces);
             CloseTabs(ref _requestExpand, timerRequests);
 
@@ -84,17 +83,59 @@ namespace Diner.Forms
             panelBody.Controls.Add(entreeView);
         }
 
+        private void PopulateDrinkControl()
+        {
+            _entreeControls.Clear();
+            panelBody.Controls.Clear();
+            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.DRINK))
+            {
+                var entreeControl = new EntreeControl(entree);
+                entreeControl.EditDrinkClicked += EntreeControl_EditDrinkClicked;
+                _entreeControls.Add(entreeControl);
+            }
+
+            var entreeView = new EntreesView(_entreeControls);
+            entreeView.Dock = DockStyle.Fill;
+            panelBody.Controls.Add(entreeView);
+        }
+
         private void EntreeControl_EditEntreeClicked(object? sender, EntreeControlEventArgs e)
         {
             var editForm = new EditForm(e.EntreeControl.Entree);
             editForm.EntreeEdited += EntreeEdited;
+            editForm.EntreeDeleted += EntreeDeleted;
             editForm.ShowDialog();
+        }
+
+        private void EntreeDeleted(object? sender, EntreeEventArgs e)
+        {
+            var entree = _entrees.Where(e => e.Type == Models.Type.ENTREE)
+                .FirstOrDefault(e => e.Id == e.Id);
+            _entrees.Remove(entree);
+            PopulateEntreeControl();
+        }
+
+        private void SauceDeleted(object? sender, EntreeEventArgs e)
+        {
+            var entree = _entrees.Where(e => e.Type == Models.Type.SAUCE)
+                .FirstOrDefault(e => e.Name == e.Name);
+            _entrees.Remove(entree);
+            PopulateEntreeControl();
+        }
+
+        private void RequestDeleted(object? sender, EntreeEventArgs e)
+        {
+            var entree = _entrees.Where(e => e.Type == Models.Type.REQUEST)
+                .FirstOrDefault(e => e.Name == e.Name);
+            _entrees.Remove(entree);
+            PopulateEntreeControl();
         }
 
         private void EntreeControl_EditSauceClicked(object? sender, EntreeControlEventArgs e)
         {
             var editForm = new EditForm(e.EntreeControl.Entree);
             editForm.EntreeEdited += SauceEdited;
+            editForm.EntreeDeleted += SauceDeleted;
             editForm.ShowDialog();
         }
 
@@ -102,6 +143,14 @@ namespace Diner.Forms
         {
             var editForm = new EditForm(e.EntreeControl.Entree);
             editForm.EntreeEdited += RequestEdited;
+            editForm.EntreeDeleted += RequestDeleted;
+            editForm.ShowDialog();
+        }
+
+        private void EntreeControl_EditDrinkClicked(object? sender, EntreeControlEventArgs e)
+        {
+            var editForm = new EditForm(e.EntreeControl.Entree);
+            editForm.EntreeEdited += DrinksEdited;
             editForm.ShowDialog();
         }
 
@@ -151,13 +200,13 @@ namespace Diner.Forms
 
         private void RequestEdited(object? sender, EntreeEventArgs e)
         {
-            var sauce = _entrees
+            var request = _entrees
                 .Where(i => i.Type == Models.Type.REQUEST)
                 .FirstOrDefault(i => e.Entree.Name.Equals(i.Name));
 
-            if (sauce != null)
+            if (request != null)
             {
-                _entrees.Remove(sauce);
+                _entrees.Remove(request);
                 _entrees.Add(e.Entree);
             }
             else
@@ -171,14 +220,36 @@ namespace Diner.Forms
             PopulateRequestControl();
         }
 
+        private void DrinksEdited(object? sender, EntreeEventArgs e)
+        {
+            var drink = _entrees
+                .Where(i => i.Type == Models.Type.DRINK)
+                .FirstOrDefault(i => e.Entree.Name.Equals(i.Name));
+
+            if (drink != null)
+            {
+                _entrees.Remove(drink);
+                _entrees.Add(e.Entree);
+            }
+            else
+            {
+                _entrees.Add(e.Entree);
+                var entreeControl = new EntreeControl(e.Entree);
+                entreeControl.EditDrinkClicked += EntreeControl_EditDrinkClicked;
+                _entreeControls.Add(entreeControl);
+            }
+
+            PopulateDrinkControl();
+        }
+
         private void btnDrinks_Click(object sender, EventArgs e)
         {
-            timerDrinks.Start();
             CheckMenuExpand();
             ColorButton(btnDrinks);
             CloseTabs(ref _entreeExpand, timerEntrees);
             CloseTabs(ref _sauceExpand, timerSauces);
             CloseTabs(ref _requestExpand, timerRequests);
+            PopulateDrinkControl();
         }
 
         private void btnSauce_Click(object sender, EventArgs e)
@@ -187,7 +258,6 @@ namespace Diner.Forms
             CheckMenuExpand();
             ColorButton(btnSauce);
             CloseTabs(ref _entreeExpand, timerEntrees);
-            CloseTabs(ref _drinksExpand, timerDrinks);
             CloseTabs(ref _requestExpand, timerRequests);
             PopulateSauceControl();
         }
@@ -198,7 +268,6 @@ namespace Diner.Forms
             CheckMenuExpand();
             ColorButton(btnRequest);
             CloseTabs(ref _entreeExpand, timerEntrees);
-            CloseTabs(ref _drinksExpand, timerDrinks);
             CloseTabs(ref _sauceExpand, timerSauces);
             PopulateRequestControl();
         }
@@ -243,12 +312,7 @@ namespace Diner.Forms
         {
             ExpandPanel(panelEntree, ref _entreeExpand, timerEntrees);
         }
-
-        private void timerDrinks_Tick(object sender, EventArgs e)
-        {
-            ExpandPanel(panelDrinks, ref _drinksExpand, timerDrinks);
-        }
-
+        
         private void ExpandPanel(Guna2Panel panel, ref bool expanded,
             System.Windows.Forms.Timer timer)
         {

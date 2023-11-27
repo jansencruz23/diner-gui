@@ -7,12 +7,18 @@ namespace Diner.Forms
     public partial class EditForm : Form
     {
         public EventHandler<EntreeEventArgs> EntreeEdited;
+        public EventHandler<EntreeEventArgs> EntreeDeleted;
         private Entree _entree;
         public EditForm(Entree entree)
         {
             _entree = entree;
             InitializeComponent();
             InitializeEntree();
+
+            if (entree.Type == Models.Type.DRINK)
+            {
+                btnDelete.Enabled = false;
+            }
         }
 
         private void InitializeEntree()
@@ -57,6 +63,12 @@ namespace Diner.Forms
             {
                 imgPic.Image = Image.FromFile(file.FileName);
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            EntreeDeleted?.Invoke(this, new EntreeEventArgs(_entree));
+            Close();
         }
     }
 }
