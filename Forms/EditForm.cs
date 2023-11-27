@@ -38,7 +38,9 @@ namespace Diner.Forms
                 if (string.IsNullOrWhiteSpace(txtName.Text)
                     || imgPic.Image == null)
                 {
-                    MessageDialog.Show("Invalid input. Try again");
+                    MessageDialog.Show(this, "Invalid input. Try again",
+                        "Save Failed", MessageDialogButtons.OK,
+                        MessageDialogIcon.Error, MessageDialogStyle.Dark);
                     return;
                 }
 
@@ -51,7 +53,9 @@ namespace Diner.Forms
             }
             catch
             {
-                MessageDialog.Show("Invalid input. Try again");
+                MessageDialog.Show(this, "Invalid input. Try again",
+                    "Save Failed", MessageDialogButtons.OK,
+                    MessageDialogIcon.Error, MessageDialogStyle.Dark);
             }
         }
 
@@ -71,6 +75,11 @@ namespace Diner.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             EntreeDeleted?.Invoke(this, new EntreeEventArgs(_entree));
+            Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

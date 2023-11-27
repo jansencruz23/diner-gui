@@ -302,10 +302,17 @@ namespace Diner.Forms
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Hide();
-            var form = new MainForm(_entrees);
-            form.FormClosed += (s, args) => Close();
-            form.Show();
+            var prompt = MessageDialog.Show(this, "Are you sure to log out?", "Admin Logout",
+                MessageDialogButtons.YesNo, MessageDialogIcon.Question,
+                MessageDialogStyle.Dark);
+
+            if (prompt == DialogResult.Yes)
+            {
+                Hide();
+                var form = new MainForm(_entrees);
+                form.FormClosed += (s, args) => Close();
+                form.Show();
+            }
         }
 
         private void btnAddEntree_Click(object sender, EventArgs e)

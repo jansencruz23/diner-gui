@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblType = new System.Windows.Forms.Label();
+            this.dragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
             // flowPanel
@@ -58,6 +60,13 @@
             this.lblType.Text = "label1";
             this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // dragControl
+            // 
+            this.dragControl.DockIndicatorTransparencyValue = 0.6D;
+            this.dragControl.DragStartTransparencyValue = 0.75D;
+            this.dragControl.TargetControl = this.lblType;
+            this.dragControl.UseTransparentDrag = true;
+            // 
             // EntreesView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -76,5 +85,6 @@
 
         private FlowLayoutPanel flowPanel;
         private Label lblType;
+        private Guna.UI2.WinForms.Guna2DragControl dragControl;
     }
 }

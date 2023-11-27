@@ -176,14 +176,14 @@
   <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCxkTGBFrnw0cAAABlElEQVRYR+2Xyy4EURCG57J12/AW
-        gtiyc3mCCZnYuD4ECwkWEq8wsWIzEsJjsGDFynXDjkSQCGlfnVNtZNKdY1qxkP6SLzOnuurvyvRERqEV
-        oigawE28wVeMkffXWMM+bbeD0CKu4BuGkJ5lHbWBwFUX3eASD7Cuyvsr/IrNEgT147uLjKJnrGJRL39C
-        rYRT+IKCzPTq5ewQIs88pqrlVOiRJWJqWg5DcxnXMP5YYx9QkGe7g83Xm5We+Ltyj83X5XGW9bYNKI7h
-        XzGqt21AsQfP3OXf5RS79bbJ0CAflTV1jQ8jzX7GlHyB/7PALs7hhTt5znEW99wpGbMF2rRnxh8d01pr
-        98dEbBbQFump+IqjomWpp5EvkC+QL2CzALgfE7xO+qNjQmvyoyYNswXmsQv33ckjfwGltuBOyZgtkJWW
-        Ftj2M6ZsaXwYmjf8jCnrGh+G5nE/Y8qIxoehWf7JOHZjNpxgSeO/BwOD+CTTP0QyBjS2NRgcxjtJycgt
-        DmlcNgjoxCU8wkcMIT2HuIgdGpNCofABMzRy9UCWQ8QAAAAASUVORK5CYII=
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCxsLOjLWdgANAAABgklEQVRYR82XSy5EQRSGrxBtZiQM
+        kFiAkZGEFdmARNhBhzUgYQMGZhiYMRchJBbgNaLT13fqVN8oXdV9O+pcvuRPV9fjP3+6+j6qEMqynEI7
+        6BZ1UAzpv0BzblEuMJTiYlyXtl+aBwy31bc22QPcqO9QZAvO0axfmgcMP8T9G3kLDIOCXa1bMeaHmoGC
+        JgHw2UOv6Awt+u5+GMweAI91taq4Q/EQDFgEWFOrgHgIOq224FDtAvpD0GEVYBwdOMeQR7Tkp9kFEPCa
+        QMfONeQeLfQmmQUQ8EuFuEatJgJMoxl0IuY/2BgYgPYuene9NlwmA/C5ql9Nefm/AQTabfTmen+H1HjW
+        ZkB6C3KCZ+pKGPwnzAF+UvzIOYdcoUnTAHilissteb43ySQAPqlb8QOyvxXjs692Ac08jPBYUauA5h7H
+        eCyrVUW8uMCA1RZsoid0iuLFBQZNAtSGgn/+Wj7KwcTkbLgl7iOQ/WjWQvLuXpe8AQRMJYT8ErIdnyiG
+        wdmwKL4ArYp8/6yYu0IAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="timerEntrees.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

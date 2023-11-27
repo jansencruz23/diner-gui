@@ -642,8 +642,8 @@
             this.panelExtra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.panelExtra.Location = new System.Drawing.Point(0, 380);
             this.panelExtra.Margin = new System.Windows.Forms.Padding(0);
-            this.panelExtra.MaximumSize = new System.Drawing.Size(840, 178);
-            this.panelExtra.MinimumSize = new System.Drawing.Size(840, 25);
+            this.panelExtra.MaximumSize = new System.Drawing.Size(1600, 178);
+            this.panelExtra.MinimumSize = new System.Drawing.Size(500, 25);
             this.panelExtra.Name = "panelExtra";
             this.panelExtra.ShadowDecoration.BorderRadius = 15;
             this.panelExtra.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
@@ -654,6 +654,8 @@
             // 
             // btnMinimize
             // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.BorderRadius = 3;
             this.btnMinimize.CustomizableEdges = customizableEdges17;
             this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

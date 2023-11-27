@@ -330,6 +330,14 @@ namespace Diner
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            if (panelCart.Controls.Count <= 0)
+            {
+                MessageDialog.Show(this, "Please order first", "Purchase Failed",
+                    MessageDialogButtons.OK, MessageDialogIcon.Error,
+                    MessageDialogStyle.Dark);
+                return;
+            }
+
             var entrees = new List<Entree>();
             foreach (var cart in panelCart.Controls.OfType<CartItem>())
             {
@@ -403,10 +411,9 @@ namespace Diner
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
-            var adminForm = new AdminForm(_entrees);
-            adminForm.FormClosed += (s, args) => Close();
-            adminForm.Show();
+            var form = new AdminLoginForm(Hide, _entrees);
+            form.FormClosed += (s, args) => Close();
+            form.ShowDialog();
         }
     }
 }

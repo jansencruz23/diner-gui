@@ -103,7 +103,7 @@
             this.flowPanelMenu.MaximumSize = new System.Drawing.Size(200, 4000);
             this.flowPanelMenu.MinimumSize = new System.Drawing.Size(59, 400);
             this.flowPanelMenu.Name = "flowPanelMenu";
-            this.flowPanelMenu.Size = new System.Drawing.Size(200, 616);
+            this.flowPanelMenu.Size = new System.Drawing.Size(200, 626);
             this.flowPanelMenu.TabIndex = 0;
             // 
             // panelMenu
@@ -152,7 +152,7 @@
             this.panelEntree.MinimumSize = new System.Drawing.Size(200, 45);
             this.panelEntree.Name = "panelEntree";
             this.panelEntree.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            this.panelEntree.Size = new System.Drawing.Size(200, 90);
+            this.panelEntree.Size = new System.Drawing.Size(200, 45);
             this.panelEntree.TabIndex = 1;
             // 
             // btnAddEntree
@@ -209,13 +209,13 @@
             this.panelSauce.Controls.Add(this.btnAddSauce);
             this.panelSauce.Controls.Add(this.btnSauce);
             this.panelSauce.CustomizableEdges = customizableEdges15;
-            this.panelSauce.Location = new System.Drawing.Point(0, 150);
+            this.panelSauce.Location = new System.Drawing.Point(0, 105);
             this.panelSauce.Margin = new System.Windows.Forms.Padding(0);
             this.panelSauce.MaximumSize = new System.Drawing.Size(200, 90);
             this.panelSauce.MinimumSize = new System.Drawing.Size(200, 45);
             this.panelSauce.Name = "panelSauce";
             this.panelSauce.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            this.panelSauce.Size = new System.Drawing.Size(200, 90);
+            this.panelSauce.Size = new System.Drawing.Size(200, 45);
             this.panelSauce.TabIndex = 3;
             // 
             // btnAddSauce
@@ -272,13 +272,13 @@
             this.panelRequest.Controls.Add(this.btnAddRequest);
             this.panelRequest.Controls.Add(this.btnRequest);
             this.panelRequest.CustomizableEdges = customizableEdges21;
-            this.panelRequest.Location = new System.Drawing.Point(0, 240);
+            this.panelRequest.Location = new System.Drawing.Point(0, 150);
             this.panelRequest.Margin = new System.Windows.Forms.Padding(0);
             this.panelRequest.MaximumSize = new System.Drawing.Size(200, 90);
             this.panelRequest.MinimumSize = new System.Drawing.Size(200, 45);
             this.panelRequest.Name = "panelRequest";
             this.panelRequest.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            this.panelRequest.Size = new System.Drawing.Size(200, 90);
+            this.panelRequest.Size = new System.Drawing.Size(200, 45);
             this.panelRequest.TabIndex = 4;
             // 
             // btnAddRequest
@@ -334,7 +334,7 @@
             // 
             this.panelDrinks.Controls.Add(this.btnDrinks);
             this.panelDrinks.CustomizableEdges = customizableEdges25;
-            this.panelDrinks.Location = new System.Drawing.Point(0, 330);
+            this.panelDrinks.Location = new System.Drawing.Point(0, 195);
             this.panelDrinks.Margin = new System.Windows.Forms.Padding(0);
             this.panelDrinks.MaximumSize = new System.Drawing.Size(200, 90);
             this.panelDrinks.MinimumSize = new System.Drawing.Size(200, 45);
@@ -375,22 +375,20 @@
             this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.btnLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.ImageOffset = new System.Drawing.Point(25, 0);
-            this.btnLogout.ImageSize = new System.Drawing.Size(18, 18);
-            this.btnLogout.Location = new System.Drawing.Point(3, 378);
+            this.btnLogout.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnLogout.Location = new System.Drawing.Point(3, 243);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            this.btnLogout.Size = new System.Drawing.Size(200, 56);
+            this.btnLogout.Size = new System.Drawing.Size(195, 44);
             this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Delete Drink";
+            this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnLogout.TextOffset = new System.Drawing.Point(20, 0);
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // timerEntrees
@@ -410,7 +408,7 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panelBody.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            this.panelBody.Size = new System.Drawing.Size(600, 616);
+            this.panelBody.Size = new System.Drawing.Size(998, 626);
             this.panelBody.TabIndex = 1;
             // 
             // timerSauces
@@ -434,10 +432,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.ClientSize = new System.Drawing.Size(1198, 626);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.flowPanelMenu);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.flowPanelMenu.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
