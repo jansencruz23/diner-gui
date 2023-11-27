@@ -208,7 +208,7 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
@@ -625,6 +625,8 @@
             this.panelExtra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.panelExtra.Location = new System.Drawing.Point(0, 380);
             this.panelExtra.Margin = new System.Windows.Forms.Padding(0);
+            this.panelExtra.MaximumSize = new System.Drawing.Size(840, 178);
+            this.panelExtra.MinimumSize = new System.Drawing.Size(840, 25);
             this.panelExtra.Name = "panelExtra";
             this.panelExtra.ShadowDecoration.BorderRadius = 15;
             this.panelExtra.ShadowDecoration.Color = System.Drawing.Color.DarkGray;

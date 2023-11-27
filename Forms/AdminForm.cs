@@ -15,13 +15,10 @@ namespace Diner.Forms
 
         private List<Entree> _entrees;
         private List<EntreeControl> _entreeControls;
-        private List<Entree> _sauces;
 
-        public AdminForm(List<Entree> entrees,
-            List<Entree> sauces)
+        public AdminForm(List<Entree> entrees)
         {
             _entrees = entrees;
-            _sauces = sauces;
             _entreeControls = new();
             InitializeComponent();
             PopulateEntreeControl();
@@ -43,7 +40,7 @@ namespace Diner.Forms
         {
             _entreeControls.Clear();
             panelBody.Controls.Clear();
-            foreach (var entree in _entrees)
+            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.ENTREE))
             {
                 var entreeControl = new EntreeControl(entree);
                 entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
@@ -59,10 +56,10 @@ namespace Diner.Forms
         {
             _entreeControls.Clear();
             panelBody.Controls.Clear();
-            foreach (var sauce in _sauces)
+            foreach (var entree in _entrees.Where(e => e.Type == Models.Type.SAUCE))
             {
-                var entreeControl = new EntreeControl(sauce);
-                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
+                var entreeControl = new EntreeControl(entree);
+                entreeControl.EditSauceClicked += EntreeControl_EditSauceClicked;
                 _entreeControls.Add(entreeControl);
             }
 
@@ -78,9 +75,18 @@ namespace Diner.Forms
             editForm.ShowDialog();
         }
 
+        private void EntreeControl_EditSauceClicked(object? sender, EntreeControlEventArgs e)
+        {
+            var editForm = new EditForm(e.EntreeControl.Entree);
+            editForm.EntreeEdited += SauceEdited;
+            editForm.ShowDialog();
+        }
+
         private void EntreeEdited(object? sender, EntreeEventArgs e)
         {
-            var entree = _entrees.FirstOrDefault(i => e.Entree.Id == i.Id);
+            var entree = _entrees
+                .Where(i => i.Type == Models.Type.ENTREE)
+                .FirstOrDefault(i => e.Entree.Id == i.Id);
             
             if (entree != null)
             {
@@ -98,30 +104,27 @@ namespace Diner.Forms
             PopulateEntreeControl();
         }
 
+        private void SauceEdited(object? sender, EntreeEventArgs e)
+        {
+            var sauce = _entrees
+                .Where(i => i.Type == Models.Type.SAUCE)
+                .FirstOrDefault(i => e.Entree.Name.Equals(i.Name));
 
+            if (sauce != null)
+            {
+                _entrees.Remove(sauce);
+                _entrees.Add(e.Entree);
+            }
+            else
+            {
+                _entrees.Add(e.Entree);
+                var entreeControl = new EntreeControl(e.Entree);
+                entreeControl.EditEntreeClicked += EntreeControl_EditSauceClicked;
+                _entreeControls.Add(entreeControl);
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            PopulateSauceControl();
+        }
 
         private void btnDrinks_Click(object sender, EventArgs e)
         {
@@ -243,7 +246,7 @@ namespace Diner.Forms
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Hide();
-            var form = new MainForm(_entrees, _sauces);
+            var form = new MainForm(_entrees);
             form.FormClosed += (s, args) => Close();
             form.Show();
         }
@@ -253,7 +256,8 @@ namespace Diner.Forms
             var form = new EditForm(new Entree
             {
                 Id = _entrees.Count + 1,
-                Quantity  = 1
+                Quantity  = 1,
+                Type = Models.Type.ENTREE
             });
 
             form.EntreeEdited += EntreeEdited;
@@ -263,7 +267,15 @@ namespace Diner.Forms
 
         private void btnAddSauce_Click(object sender, EventArgs e)
         {
+            var form = new EditForm(new Entree
+            {
+                Quantity = 1,
+                Type = Models.Type.SAUCE
+            });
 
+            form.EntreeEdited += SauceEdited;
+            form.ShowDialog();
+            PopulateSauceControl();
         }
     }
 }

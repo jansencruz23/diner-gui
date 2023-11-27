@@ -10,8 +10,6 @@ namespace Diner
     {
         private List<EntreeControl> _entreeControls;
         private List<Entree> _entrees;
-        private List<Entree> _sauces;
-        private List<Entree> _drinks;
         private double _total;
         private bool _extraPanelExpand;
 
@@ -19,21 +17,18 @@ namespace Diner
         {
             _entreeControls = new();
             _entrees = new();
-            _sauces = new();
             InitializeComponent();
             InitializeEntrees();
             InitializeSauce();
         }
 
-        public MainForm(List<Entree> entree,
-            List<Entree> sauces)
+        public MainForm(List<Entree> entree)
         {
             _entreeControls = new();
             _entrees = entree;
-            _sauces = sauces;
             InitializeComponent();
             InitializeEntrees();
-            InitializeSauce();
+            InitializeSauce(true);
         }
 
         private void InitializeEntrees()
@@ -50,7 +45,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/burger.jpg"),
                         Name = "Burger",
                         Price = 35,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -59,7 +55,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Fried Chicken.jpg"),
                         Name = "Fried Chicken",
                         Price = 75,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -68,7 +65,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Chicken Masala.jpg"),
                         Name = "Chicken Masala",
                         Price = 140,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -77,7 +75,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Chicken Biryani.jpg"),
                         Name = "Chicken Biryani",
                         Price = 120,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -86,7 +85,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Sisig.jpg"),
                         Name = "Sisig",
                         Price = 100,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -95,7 +95,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Chicken Teriyaki.jpg"),
                         Name = "Chicken Teriyaki",
                         Price = 90,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -104,7 +105,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Reuben.jpg"),
                         Name = "Reuben",
                         Price = 60,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -113,7 +115,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/French Fries.jpg"),
                         Name = "French Fries",
                         Price = 40,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -122,7 +125,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Pizza.jpg"),
                         Name = "Pizza",
                         Price = 230,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
                 new EntreeControl(
                     new Entree
@@ -131,7 +135,8 @@ namespace Diner
                         Image = Image.FromFile("./Icons/Chopsuey.jpg"),
                         Name = "Chopsuey",
                         Price = 90,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.ENTREE
                     }),
             };
 
@@ -145,7 +150,8 @@ namespace Diner
                 }
             }
 
-            foreach (var entree in _entreeControls)
+            foreach (var entree in _entreeControls
+                .Where(e => e.Entree.Type == Models.Type.ENTREE))
             {
                 entree.AddToCartClicked += Entree_AddToCartClicked!;
                 panelItem.Controls.Add(entree);
@@ -153,25 +159,27 @@ namespace Diner
             }
         }
 
-        private void InitializeSauce()
+        private void InitializeSauce(bool fromAdmin = false)
         {
-            if (_sauces.Count <= 0)
+            if (!fromAdmin)
             {
                 foreach (var sauce in lbSauce.Items)
                 {
-                    _sauces.Add(new Entree
+                    _entrees.Add(new Entree
                     {
                         Name = sauce.ToString(),
                         Image = Image.FromFile($"./Icons/{sauce}.jpg"),
                         Price = 0,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.SAUCE
                     });
                 }
                 return;
             }
 
             lbSauce.Items.Clear();
-            foreach (var sauce in _sauces)
+            foreach (var sauce in _entrees
+                .Where(e => e.Type == Models.Type.SAUCE))
             {
                 lbSauce.Items.Add(sauce.Name);
             }
@@ -231,7 +239,10 @@ namespace Diner
 
         private void AddNewCartItem(string itemName)
         {
-            var sauce = _sauces.FirstOrDefault(s => s.Name.Equals(itemName));
+            var sauce = _entrees
+                .Where(s => s.Type == Models.Type.SAUCE)
+                .FirstOrDefault(s => s.Name.Equals(itemName));
+
             CartItem cartItem;
             if (sauce == null)
             {
@@ -241,7 +252,8 @@ namespace Diner
                         Name = itemName,
                         Image = Image.FromFile($"./Icons/{itemName}.jpg"),
                         Price = 0,
-                        Quantity = 1
+                        Quantity = 1,
+                        Type = Models.Type.SAUCE
                     });
             }
             else
@@ -423,7 +435,7 @@ namespace Diner
 
         private void timerPanel_Tick(object sender, EventArgs e)
         {
-            var change = _extraPanelExpand ? 10 : -10;
+            var change = _extraPanelExpand ? 5 : -5;
             panelExtra.Height += change;
 
             if ((_extraPanelExpand && panelExtra.Height >= panelExtra.MaximumSize.Height)
@@ -437,7 +449,7 @@ namespace Diner
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
-            var adminForm = new AdminForm(_entrees, _sauces);
+            var adminForm = new AdminForm(_entrees);
             adminForm.FormClosed += (s, args) => Close();
             adminForm.Show();
         }

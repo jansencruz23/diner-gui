@@ -7,6 +7,7 @@ namespace Diner
     {
         public event EventHandler<EntreeControlEventArgs> AddToCartClicked;
         public event EventHandler<EntreeControlEventArgs> EditEntreeClicked;
+        public event EventHandler<EntreeControlEventArgs> EditSauceClicked;
         public Entree Entree { get; set; }
         public EntreeControl(Entree entree)
         {
@@ -36,13 +37,21 @@ namespace Diner
             InvokeOnClick(this, EventArgs.Empty);
 
             AddToCartClicked?.Invoke(this,
-                new EntreeControlEventArgs(
-                    this));
+                new EntreeControlEventArgs(this));
+
+            switch (Entree.Type)
+            {
+                case Models.Type.ENTREE:
+                    EditEntreeClicked?.Invoke(this,
+                        new EntreeControlEventArgs(this));
+                    break;
+                case Models.Type.SAUCE:
+                    EditSauceClicked?.Invoke(this,
+                       new EntreeControlEventArgs(this));
+                    break;
+            }
 
 
-            EditEntreeClicked?.Invoke(this,
-                new EntreeControlEventArgs
-                    (this));
         }
     }
 }
