@@ -54,6 +54,8 @@ namespace Diner.Forms
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.dragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgPic)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,10 +66,10 @@ namespace Diner.Forms
             this.imgPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgPic.CustomizableEdges = customizableEdges1;
             this.imgPic.ImageRotate = 0F;
-            this.imgPic.Location = new System.Drawing.Point(25, 68);
+            this.imgPic.Location = new System.Drawing.Point(25, 65);
             this.imgPic.Name = "imgPic";
             this.imgPic.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.imgPic.Size = new System.Drawing.Size(110, 110);
+            this.imgPic.Size = new System.Drawing.Size(123, 132);
             this.imgPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPic.TabIndex = 0;
             this.imgPic.TabStop = false;
@@ -88,7 +90,7 @@ namespace Diner.Forms
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(166, 74);
+            this.txtName.Location = new System.Drawing.Point(166, 87);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -112,7 +114,7 @@ namespace Diner.Forms
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(166, 135);
+            this.txtPrice.Location = new System.Drawing.Point(166, 160);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
@@ -133,7 +135,7 @@ namespace Diner.Forms
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(63)))));
             this.btnSave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(25, 203);
+            this.btnSave.Location = new System.Drawing.Point(25, 225);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.btnSave.Size = new System.Drawing.Size(303, 45);
@@ -156,7 +158,7 @@ namespace Diner.Forms
             this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(63)))));
-            this.btnDelete.Location = new System.Drawing.Point(25, 259);
+            this.btnDelete.Location = new System.Drawing.Point(25, 281);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.btnDelete.Size = new System.Drawing.Size(303, 45);
@@ -198,6 +200,8 @@ namespace Diner.Forms
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.txtName);
             this.guna2Panel1.Controls.Add(this.txtPrice);
             this.guna2Panel1.Controls.Add(this.btnSave);
@@ -209,14 +213,36 @@ namespace Diner.Forms
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            this.guna2Panel1.Size = new System.Drawing.Size(352, 342);
+            this.guna2Panel1.Size = new System.Drawing.Size(352, 361);
             this.guna2Panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(164, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(166, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Price";
             // 
             // EditForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(352, 342);
+            this.ClientSize = new System.Drawing.Size(352, 361);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -225,6 +251,7 @@ namespace Diner.Forms
             this.Text = "EditForm";
             ((System.ComponentModel.ISupportInitialize)(this.imgPic)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +266,7 @@ namespace Diner.Forms
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2DragControl dragControl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Label label2;
+        private Label label1;
     }
 }
