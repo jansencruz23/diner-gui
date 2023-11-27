@@ -15,10 +15,13 @@ namespace Diner.Forms
 
         private List<Entree> _entrees;
         private List<EntreeControl> _entreeControls;
+        private List<Entree> _sauces;
 
-        public AdminForm(List<Entree> entree)
+        public AdminForm(List<Entree> entrees,
+            List<Entree> sauces)
         {
-            _entrees = entree;
+            _entrees = entrees;
+            _sauces = sauces;
             _entreeControls = new();
             InitializeComponent();
             PopulateEntreeControl();
@@ -43,6 +46,22 @@ namespace Diner.Forms
             foreach (var entree in _entrees)
             {
                 var entreeControl = new EntreeControl(entree);
+                entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
+                _entreeControls.Add(entreeControl);
+            }
+
+            var entreeView = new EntreesView(_entreeControls);
+            entreeView.Dock = DockStyle.Fill;
+            panelBody.Controls.Add(entreeView);
+        }
+
+        private void PopulateSauceControl()
+        {
+            _entreeControls.Clear();
+            panelBody.Controls.Clear();
+            foreach (var sauce in _sauces)
+            {
+                var entreeControl = new EntreeControl(sauce);
                 entreeControl.EditEntreeClicked += EntreeControl_EditEntreeClicked;
                 _entreeControls.Add(entreeControl);
             }
@@ -122,6 +141,7 @@ namespace Diner.Forms
             CloseTabs(ref _entreeExpand, timerEntrees);
             CloseTabs(ref _drinksExpand, timerDrinks);
             CloseTabs(ref _requestExpand, timerRequests);
+            PopulateSauceControl();
         }
 
         private void btnRequest_Click(object sender, EventArgs e)
@@ -223,7 +243,7 @@ namespace Diner.Forms
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Hide();
-            var form = new MainForm(_entrees);
+            var form = new MainForm(_entrees, _sauces);
             form.FormClosed += (s, args) => Close();
             form.Show();
         }
@@ -232,12 +252,18 @@ namespace Diner.Forms
         {
             var form = new EditForm(new Entree
             {
-                Id = _entrees.Count + 1
+                Id = _entrees.Count + 1,
+                Quantity  = 1
             });
 
             form.EntreeEdited += EntreeEdited;
             form.ShowDialog();
             PopulateEntreeControl();
+        }
+
+        private void btnAddSauce_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

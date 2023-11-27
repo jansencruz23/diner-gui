@@ -245,6 +245,7 @@
             this.btnAddSauce.Text = "Add Sauce";
             this.btnAddSauce.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddSauce.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnAddSauce.Click += new System.EventHandler(this.btnAddSauce_Click);
             // 
             // btnSauce
             // 

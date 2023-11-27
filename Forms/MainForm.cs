@@ -10,6 +10,7 @@ namespace Diner
     {
         private List<EntreeControl> _entreeControls;
         private List<Entree> _entrees;
+        private List<Entree> _sauces;
         private List<Entree> _drinks;
         private double _total;
         private bool _extraPanelExpand;
@@ -18,16 +19,21 @@ namespace Diner
         {
             _entreeControls = new();
             _entrees = new();
+            _sauces = new();
             InitializeComponent();
             InitializeEntrees();
+            InitializeSauce();
         }
 
-        public MainForm(List<Entree> entree)
+        public MainForm(List<Entree> entree,
+            List<Entree> sauces)
         {
             _entreeControls = new();
             _entrees = entree;
+            _sauces = sauces;
             InitializeComponent();
             InitializeEntrees();
+            InitializeSauce();
         }
 
         private void InitializeEntrees()
@@ -147,6 +153,30 @@ namespace Diner
             }
         }
 
+        private void InitializeSauce()
+        {
+            if (_sauces.Count <= 0)
+            {
+                foreach (var sauce in lbSauce.Items)
+                {
+                    _sauces.Add(new Entree
+                    {
+                        Name = sauce.ToString(),
+                        Image = Image.FromFile($"./Icons/{sauce}.jpg"),
+                        Price = 0,
+                        Quantity = 1
+                    });
+                }
+                return;
+            }
+
+            lbSauce.Items.Clear();
+            foreach (var sauce in _sauces)
+            {
+                lbSauce.Items.Add(sauce.Name);
+            }
+        }
+
         private void Entree_AddToCartClicked(object sender, EntreeControlEventArgs e)
         {
             var existingItem = GetExistingCartItem(e.EntreeControl.Entree.Id);
@@ -181,6 +211,7 @@ namespace Diner
             {
                 var itemName = item.ToString();
                 UpdateCartItem(itemName);
+                RefreshTotal();
             }
         }
 
@@ -200,7 +231,11 @@ namespace Diner
 
         private void AddNewCartItem(string itemName)
         {
-            var cartItem = new CartItem(
+            var sauce = _sauces.FirstOrDefault(s => s.Name.Equals(itemName));
+            CartItem cartItem;
+            if (sauce == null)
+            {
+                cartItem = new CartItem(
                     new Entree
                     {
                         Name = itemName,
@@ -208,6 +243,11 @@ namespace Diner
                         Price = 0,
                         Quantity = 1
                     });
+            }
+            else
+            {
+                cartItem = new CartItem(sauce);
+            }
 
             cartItem.RemoveFromCartClicked += RemoveFromCart_Clicked!;
             panelCart.Controls.Add(cartItem);
@@ -397,7 +437,7 @@ namespace Diner
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
-            var adminForm = new AdminForm(_entrees);
+            var adminForm = new AdminForm(_entrees, _sauces);
             adminForm.FormClosed += (s, args) => Close();
             adminForm.Show();
         }
