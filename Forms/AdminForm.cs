@@ -399,7 +399,7 @@ namespace Diner.Forms
 
             form.EntreeEdited += RequestEdited;
             form.ShowDialog();
-            PopulateSauceControl();
+            PopulateRequestControl();
         }
     }
 }
