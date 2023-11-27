@@ -308,6 +308,7 @@
             this.btnAddRequest.Text = "Add Request";
             this.btnAddRequest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddRequest.TextOffset = new System.Drawing.Point(35, 0);
+            this.btnAddRequest.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
             // btnRequest
             // 

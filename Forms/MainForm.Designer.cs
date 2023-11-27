@@ -688,9 +688,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(278, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 18);
+            this.label3.Size = new System.Drawing.Size(151, 18);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Special Requests (₱ 10 each)";
+            this.label3.Text = "Special Requests ";
             // 
             // label2
             // 
@@ -699,9 +699,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(28, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 18);
+            this.label2.Size = new System.Drawing.Size(114, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Extra Sauces (free)";
+            this.label2.Text = "Extra Sauces";
             // 
             // lbSauce
             // 

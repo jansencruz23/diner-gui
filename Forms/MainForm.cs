@@ -20,6 +20,7 @@ namespace Diner
             InitializeComponent();
             InitializeEntrees();
             InitializeSauce();
+            InitializeRequest();
         }
 
         public MainForm(List<Entree> entree)
@@ -29,6 +30,7 @@ namespace Diner
             InitializeComponent();
             InitializeEntrees();
             InitializeSauce(true);
+            InitializeRequest(true);
         }
 
         private void InitializeEntrees()
@@ -185,6 +187,33 @@ namespace Diner
             }
         }
 
+        private void InitializeRequest(bool fromAdmin = false)
+        {
+            if (!fromAdmin)
+            {
+                foreach (var request in cbRequest.Items)
+                {
+                    _entrees.Add(new Entree
+                    {
+                        Id = 99,
+                        Name = request.ToString(),
+                        Image = Image.FromFile($"./Icons/{request}.jpg"),
+                        Price = 10,
+                        Quantity = 1,
+                        Type = Models.Type.REQUEST
+                    });
+                }
+                return;
+            }
+
+            cbRequest.Items.Clear();
+            foreach (var request in _entrees
+                .Where(e => e.Type == Models.Type.REQUEST))
+            {
+                cbRequest.Items.Add(request.Name);
+            }
+        }
+
         private void Entree_AddToCartClicked(object sender, EntreeControlEventArgs e)
         {
             var existingItem = GetExistingCartItem(e.EntreeControl.Entree.Id);
@@ -283,17 +312,24 @@ namespace Diner
             }
 
             var itemName = cbRequest.SelectedItem.ToString();
+            var request = _entrees
+                .Where(s => s.Type == Models.Type.REQUEST)
+                .FirstOrDefault(s => s.Name.Equals(itemName));
 
-            var entree = new Entree
+            if (request == null)
             {
-                Id = 99,
-                Name = itemName,
-                Image = Image.FromFile($"./Icons/{itemName}.jpg"),
-                Price = 10,
-                Quantity = 1
-            };
+                request = new Entree
+                {
+                    Id = 99,
+                    Name = itemName,
+                    Image = Image.FromFile($"./Icons/{itemName}.jpg"),
+                    Price = 10,
+                    Quantity = 1,
+                    Type = Models.Type.REQUEST
+                };
+            }
 
-            AddOrRemoveSingleItem(entree);
+            AddOrRemoveSingleItem(request);
         }
 
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
